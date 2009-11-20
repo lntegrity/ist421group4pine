@@ -1,0 +1,75 @@
+﻿Body
+{
+    background-color:#dddddd;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+.Container
+{
+	margin-left:auto;
+	margin-right:auto;
+	font:100%;
+	width:850px;
+	background-color:White;
+	border-left:solid 1px gray;
+	border-right:solid 1px gray;
+	border-bottom:solid 1px gray;
+}
+.TopContent
+{
+	color:Yellow;
+	font-size: 2.5em;
+	width:850px;
+	height: 180px;
+	background-image: url('./Images/leaves.gif');
+	background-color:White;
+	margin:0px 0px 0px 0px;
+}
+.Content
+{
+	margin-top:75px;	
+	margin-left:20px;
+	position:relative;
+	background-color:White;
+	height:400px;
+}
+.PrimaryNavigation
+{
+	font-family:Arial;
+	font-size:18px;
+	line-height:1.0em;
+	position:absolute;
+	padding:0px 0px 4px 0px;
+	margin:0px 0px 0px 0px;
+	background-color:White;
+	border-bottom:solid 2px black;
+	width:850px;
+}
+.PrimaryNavigation li
+{
+	float:left;
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+.PrimaryNavigation a
+{
+	display:block;
+	color:White;
+	text-decoration:none;
+	background:#663300;
+	margin:0px 0px 0px 72px;
+	padding:0.20em 0.45em;
+	border:solid 1px black; 
+}
+.PrimaryNavigation a:hover, a:active, a.here:link, a.here:visited
+{
+	background:#CC6633;
+	color:Black;
+	margin-left:72px;
+	margin-top:0px;
+}
+.PrimaryNavigation a.here:link, a.here:visited
+{
+	position:relative;
+}
