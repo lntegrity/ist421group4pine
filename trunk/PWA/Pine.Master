@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Pine.master.cs" Inherits="PWA.Pine" %>
+<%@ Register Src="~/Controls/Banner.ascx" TagName="Banner" TagPrefix="ucBan" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+  <form id="form1" runat="server">
+    <div class="Container">  
+        <div class="TopContent">
+            <ucBan:Banner ID="Banner" runat="server" />
+        </div>
+        
+        <div class="PrimaryNavigation">
+            <ul>
+                <asp:SiteMapDataSource ID="siteMapData" runat="server" ShowStartingNode="false" />
+                <asp:Repeater ID="menu" runat="server" DataSourceID="siteMapData">
+                    <ItemTemplate>
+                        <li>
+                            <a href="<%# Eval("url")%>"><%# Eval("title") %></a>
+                        </li>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ul>
+        </div>
+
+        <div class="Content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>   
+  </form>
+</body>
+</html>
