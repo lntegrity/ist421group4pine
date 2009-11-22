@@ -262,11 +262,47 @@ namespace PWA.PineWS {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class Lead {
         
+        private string cityField;
+        
+        private string stateField;
+        
+        private string phoneField;
+        
         private int idField;
         
         private string nameField;
         
         private string addressField;
+        
+        /// <remarks/>
+        public string City {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string State {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Phone {
+            get {
+                return this.phoneField;
+            }
+            set {
+                this.phoneField = value;
+            }
+        }
         
         /// <remarks/>
         public int ID {

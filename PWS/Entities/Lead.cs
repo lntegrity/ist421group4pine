@@ -10,9 +10,28 @@ namespace PWS.Entities
         private int _ID;
         private string _Name;
         private string _Address;
+        private string _City;
+        private string _State;
+        private string _Phone;        
 
+        public string City
+        {
+            get { return _City; }
+            set { _City = value; }
+        }
+        
+        public string State
+        {
+            get { return _State; }
+            set { _State = value; }
+        }
 
-
+        public string Phone
+        {
+            get { return _Phone; }
+            set { _Phone = value; }
+        }
+        
         public int ID
         {
             get { return _ID; }
