@@ -18,3 +18,8 @@ C:\Users\Naomi\Desktop\ist421group4pine\PWS\bin\PWS.pdb
 C:\Users\Naomi\Desktop\ist421group4pine\PWS\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Naomi\Desktop\ist421group4pine\PWS\obj\Debug\PWS.dll
 C:\Users\Naomi\Desktop\ist421group4pine\PWS\obj\Debug\PWS.pdb
+I:\PSU 2008\IST 421\Projects\Takara\PWS\bin\PWS.dll
+I:\PSU 2008\IST 421\Projects\Takara\PWS\bin\PWS.pdb
+I:\PSU 2008\IST 421\Projects\Takara\PWS\obj\Debug\ResolveAssemblyReference.cache
+I:\PSU 2008\IST 421\Projects\Takara\PWS\obj\Debug\PWS.dll
+I:\PSU 2008\IST 421\Projects\Takara\PWS\obj\Debug\PWS.pdb
