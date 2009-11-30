@@ -13,3 +13,8 @@ G:\PSU 2008\IST 421\Projects\Pine\PWS\bin\PWS.pdb
 G:\PSU 2008\IST 421\Projects\Pine\PWS\obj\Debug\ResolveAssemblyReference.cache
 G:\PSU 2008\IST 421\Projects\Pine\PWS\obj\Debug\PWS.dll
 G:\PSU 2008\IST 421\Projects\Pine\PWS\obj\Debug\PWS.pdb
+C:\Users\Naomi\Desktop\ist421group4pine\PWS\bin\PWS.dll
+C:\Users\Naomi\Desktop\ist421group4pine\PWS\bin\PWS.pdb
+C:\Users\Naomi\Desktop\ist421group4pine\PWS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Naomi\Desktop\ist421group4pine\PWS\obj\Debug\PWS.dll
+C:\Users\Naomi\Desktop\ist421group4pine\PWS\obj\Debug\PWS.pdb
