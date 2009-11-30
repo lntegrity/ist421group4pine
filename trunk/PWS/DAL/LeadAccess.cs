@@ -16,6 +16,9 @@ namespace PWS.DAL
             l.ID = (int)Row["fldLeadID"];
             l.Name = Row["fldLeadName"] as string;
             l.Address = Row["fldLeadAddress"] as string;
+            l.City = Row["fldLeadCity"] as string;
+            l.State = Row["fldLeadState"] as string;
+            l.Phone = Row["fldLeadPhone"] as string;
             return l;
         }
 
