@@ -11,23 +11,22 @@
 <body>
   <form id="form1" runat="server">
     <div class="Container">  
-        <div class="TopContent">
-            <ucBan:Banner ID="Banner" runat="server" />
+        <div class="Header">  
+            <div class="Banner">
+            </div>
+            <div class="PrimaryNavigation">
+                <ul>
+                    <asp:SiteMapDataSource ID="siteMapData" runat="server" ShowStartingNode="false" />
+                    <asp:Repeater ID="menu" runat="server" DataSourceID="siteMapData">
+                        <ItemTemplate>
+                            <li>
+                                <a href="<%# Eval("url")%>"><%# Eval("title") %></a>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </ul>
+            </div>
         </div>
-        
-        <div class="PrimaryNavigation">
-            <ul>
-                <asp:SiteMapDataSource ID="siteMapData" runat="server" ShowStartingNode="false" />
-                <asp:Repeater ID="menu" runat="server" DataSourceID="siteMapData">
-                    <ItemTemplate>
-                        <li>
-                            <a href="<%# Eval("url")%>"><%# Eval("title") %></a>
-                        </li>
-                    </ItemTemplate>
-                </asp:Repeater>
-            </ul>
-        </div>
-
         <div class="Content">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             
