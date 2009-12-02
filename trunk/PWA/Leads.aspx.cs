@@ -15,7 +15,8 @@ namespace PWA
             Service1 WS = new Service1();
             Lead[] ld = WS.GetLeads();
             LeadsList.DataSource = ld;
-            LeadsList.DataBind();
+            LeadsList.DataBind();            
         }
+        
     }
 }
