@@ -126,6 +126,7 @@
     <Content Include="Pine.Master" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,6 +141,7 @@
     <None Include="Web References\PineWS\Service1.disco" />
     <None Include="Web References\PineWS\Service1.wsdl" />
     <Content Include="About.aspx" />
+    <Content Include="App_Themes\SummerTheme\Images\UnagiRoll.jpg" />
     <Content Include="Menu.aspx" />
     <Content Include="Order.aspx" />
     <Content Include="Web.sitemap" />

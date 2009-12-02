@@ -3,8 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="Content">
-        <h1>Place Your Order:</h1>
-        <table class="style1">
+        <h1>Confirm Your Order:</h1>
+        <table>
             <tr>
                 <td>
                     Name:</td>
@@ -41,9 +41,12 @@
                 </td>
             </tr>
         </table>
+        <p>
+            <asp:Button ID="btnSubmit" runat="server" Text="Submit Order" /></p>
     </div>
     <div class="Content">
-        <p>Menu with ID, name, price, and a way to select quantity</p>
+        <p>Menu with name, price, and total
         <asp:DataGrid ID="Menu" runat="server" ></asp:DataGrid>
+        </p>
     </div>
 </asp:Content>

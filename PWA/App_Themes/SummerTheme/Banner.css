@@ -37,12 +37,41 @@
 }
 .Content
 {
-	margin-left:40px;
-	margin-right:40px;
+	margin-left:30px;
+	margin-right:30px;
 	margin-top:0px;
 	background-color:White;
 	float:left;
 	position:relative;
+}
+.Content h1
+{
+	font-family:Arial, sans-serif;
+	font-size:1.6em;
+}
+.Content p
+{
+	font-family:Arial;
+	font-size:.85em;
+}
+.HomeContent
+{
+	width:400px;
+	float:left;
+	position:relative;
+	background-color:White;
+	padding-right:40px;
+	margin-top:20px;
+	margin-left:20px;
+}	
+.HomeImage
+{
+	background-repeat:no-repeat;
+	float:right;
+	position:relative;
+	width:320px;
+	padding-top:50px;
+	margin-top:20px;
 }
 .PrimaryNavigation
 {
