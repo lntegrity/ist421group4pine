@@ -20,27 +20,34 @@
     <div>        
         <table class="style1" cellpadding="3" cellspacing="2">
             <tr>
-            <td rowspan="8" class="style2"><asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-            DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#CC9966" 
-            BorderStyle="Solid" BorderWidth="1px" CellPadding="4">
-            <RowStyle BackColor="White" ForeColor="#000066" />
-            <Columns>
-            <asp:BoundField DataField="fldItemID" HeaderText="Item ID" 
-                InsertVisible="False" ReadOnly="True" SortExpression="fldItemID" />
-            <asp:BoundField DataField="fldItemName" HeaderText="Item Name" 
-                SortExpression="fldItemName" />
-            <asp:BoundField DataField="fldDescription" HeaderText="Description" 
-                SortExpression="fldDescription" />
-            <asp:BoundField DataField="fldItemPrice" HeaderText="Item Price" 
-                SortExpression="fldItemPrice" />
-            </Columns>
-            <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
-            <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
-            <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
-            <HeaderStyle BackColor="#663300" Font-Bold="True" ForeColor="#FFFFCC" />
-            </asp:GridView>
+            <td rowspan="8" class="style2">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                    BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" 
+                    CellPadding="4" DataSourceID="SqlDataSource1" 
+                    EmptyDataText="There are no data records to display.">
+                    <RowStyle BackColor="White" ForeColor="#330099" />
+                    <Columns>
+                        <asp:BoundField DataField="fldItemID" HeaderText="Item ID" ReadOnly="True" 
+                            SortExpression="fldItemID" />
+                        <asp:BoundField DataField="fldItemName" HeaderText="Item Name" 
+                            SortExpression="fldItemName" />
+                        <asp:BoundField DataField="fldDescription" HeaderText="Description" 
+                            SortExpression="fldDescription" />
+                        <asp:BoundField DataField="fldItemPrice" HeaderText="Price" 
+                            SortExpression="fldItemPrice" />
+                    </Columns>
+                    <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
+                    <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
+                    <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
+                    <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:PineConnectionString1 %>" 
+                    ProviderName="<%$ ConnectionStrings:PineConnectionString1.ProviderName %>" 
+                    SelectCommand="SELECT [fldItemID], [fldItemName], [fldDescription], [fldItemPrice] FROM [tblMenu]">
+                </asp:SqlDataSource>
             </td>
-            <td><FONT COLOR=black FACE="Geneva, Arial" SIZE=2>Quantity</FONT></td>
+            <td bgcolor="#663300"><font color="black" face="Times New Roman" size="2">Quantity</font></td>
             </tr>
             <tr>
                 <td height="10px">
@@ -80,10 +87,6 @@
         </table>
         
     </div>
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-    ConnectionString="<%$ ConnectionStrings:PineConnectionString %>" 
-    SelectCommand="SELECT [fldItemID], [fldItemName], [fldDescription], [fldItemPrice] FROM [tblMenu]">
-</asp:SqlDataSource>
     <p>
         <asp:Button ID="btnContinue" runat="server" Text="Continue" 
             onclick="btnContinue_Click" />
