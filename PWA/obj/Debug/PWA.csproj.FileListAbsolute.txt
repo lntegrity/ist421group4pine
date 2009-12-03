@@ -28,3 +28,8 @@ E:\PSU 2008\IST 421\Projects\Takara\PWA\bin\PWA.pdb
 E:\PSU 2008\IST 421\Projects\Takara\PWA\obj\Debug\ResolveAssemblyReference.cache
 E:\PSU 2008\IST 421\Projects\Takara\PWA\obj\Debug\PWA.dll
 E:\PSU 2008\IST 421\Projects\Takara\PWA\obj\Debug\PWA.pdb
+G:\PSU 2008\IST 421\Projects\Takara\PWA\bin\PWA.dll
+G:\PSU 2008\IST 421\Projects\Takara\PWA\bin\PWA.pdb
+G:\PSU 2008\IST 421\Projects\Takara\PWA\obj\Debug\ResolveAssemblyReference.cache
+G:\PSU 2008\IST 421\Projects\Takara\PWA\obj\Debug\PWA.dll
+G:\PSU 2008\IST 421\Projects\Takara\PWA\obj\Debug\PWA.pdb

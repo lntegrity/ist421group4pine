@@ -46,13 +46,14 @@
 }
 .Content h1
 {
-	font-family:Arial, sans-serif;
+	font-family:"Tempus Sans ITC", "Times New Roman", Serif;
 	font-size:1.6em;
 }
 .Content p
 {
-	font-family:Arial;
+	font-family:"Helvetica";
 	font-size:.85em;
+	line-height:1.2;
 }
 .HomeContent
 {
