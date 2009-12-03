@@ -2,13 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="Content">
+    <div class="HomeContent">
         <h1>About the Project</h1>
-            <p>Design a simple e-commerce Web site using ASP.NET</p>
+            <p>Design a Web site using ASP.NET that employs a Web service, 
+            utilizes Themes, and accesses a SQL database via stored procedures.</p>
         <h1>Team Takara</h1>
-            <p>Ron Malcolm</p>
-            <p>Ed Morgan</p>
-            <p>Naomi Johner</p>
-            <p>Joe Golderer</p>
+            <p>Ron Malcolm - <i>Team leader, front-end developer</i></p>
+            <p>Ed Morgan - <i>Database design, DAL developer</i></p>
+            <p>Naomi Johner - <i>Database creator, documentation</i></p>
+            <p>Joe Golderer - <i>Back-end developer, site design</i></p>
+    </div>
+    <div class="HomeImage">
+        <img src="App_Themes/SummerTheme/Images/JapaneseGarden.jpg" alt="" />
     </div>
 </asp:Content>

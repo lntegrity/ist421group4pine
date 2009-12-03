@@ -2,40 +2,41 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="Content">
+    <div class="HomeContent">
         <h1>Confirm Your Order:</h1>
+        <p>Please enter your personal information, review your order to the right, then press Submit Order.</p>
         <table>
             <tr>
                 <td>
-                    Name:</td>
+                    <font face="Helvetica" size="3">Name:</font></td>
                 <td>
                     <asp:TextBox ID="txtLeadName" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>
-                    Address:</td>
+                    <font face="Helvetica">Address:</font></td>
                 <td>
                     <asp:TextBox ID="txtLeadAddress" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>
-                    City:</td>
+                    <font face="Helvetica">City:</font></td>
                 <td>
                     <asp:TextBox ID="txtLeadCity" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>
-                    State:</td>
+                    <font face="Helvetica">State:</font></td>
                 <td>
                     <asp:TextBox ID="txtLeadState" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>
-                    Phone:</td>
+                    <font face="Helvetica">Phone:</font></td>
                 <td>
                     <asp:TextBox ID="txtLeadPhone" runat="server"></asp:TextBox>
                 </td>
@@ -44,8 +45,8 @@
         <p>
             <asp:Button ID="btnSubmit" runat="server" Text="Submit Order" /></p>
     </div>
-    <div class="Content">
-        <p>Menu with name, price, and total
+    <div class="HomeImage">
+        <p>Menu with name, quantity, and total
         <asp:DataGrid ID="Menu" runat="server" ></asp:DataGrid>
         </p>
     </div>
