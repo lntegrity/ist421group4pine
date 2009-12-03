@@ -33,3 +33,8 @@ G:\PSU 2008\IST 421\Projects\Takara\PWS\bin\PWS.pdb
 G:\PSU 2008\IST 421\Projects\Takara\PWS\obj\Debug\ResolveAssemblyReference.cache
 G:\PSU 2008\IST 421\Projects\Takara\PWS\obj\Debug\PWS.dll
 G:\PSU 2008\IST 421\Projects\Takara\PWS\obj\Debug\PWS.pdb
+C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWS\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWS\obj\Debug\PWS.dll
+C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWS\obj\Debug\PWS.pdb
+C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWS\bin\PWS.dll
+C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWS\bin\PWS.pdb
