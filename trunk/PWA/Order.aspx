@@ -43,7 +43,8 @@
             </tr>
         </table>
         <p>
-            <asp:Button ID="btnSubmit" runat="server" Text="Submit Order" /></p>
+            <asp:Button ID="btnSubmit" runat="server" Text="Submit Order" 
+                onclick="btnSubmit_Click" /></p>
     </div>
     <div class="HomeImage">
         <p>Menu with name, quantity, and total
