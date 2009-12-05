@@ -17,7 +17,7 @@ namespace PWA
 
         protected void btnContinue_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Order.aspx");
         }
     }
 }

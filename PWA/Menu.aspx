@@ -9,6 +9,14 @@
         {
             width: 624px;
         }
+        .style3
+        {
+            width: 290px;
+        }
+        .style4
+        {
+            width: 239px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -19,16 +27,12 @@
     <div>        
         <table class="style1" cellpadding="2" cellspacing="0">
             <tr>
-            <td rowspan="8" class="style2" valign="top">
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                    ConnectionString="<%$ ConnectionStrings:PineConnectionString %>" 
-                    SelectCommand="SELECT [fldItemID], [fldItemName], [fldDescription], [fldItemPrice] FROM [tblMenu]">
-                </asp:SqlDataSource>
+            <td rowspan="8" class="style2" valign="top" colspan="3">
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                     BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" 
                     CellPadding="4" DataSourceID="SqlDataSource1" 
                     EmptyDataText="There are no data records to display." ForeColor="#000066">
-                    <RowStyle BackColor="White" ForeColor="#330099" />
+                    <RowStyle BackColor="White" ForeColor="#000066" />
                     <Columns>
                         <asp:BoundField DataField="fldItemID" HeaderText="Item ID" ReadOnly="True" 
                             SortExpression="fldItemID" InsertVisible="False" />
@@ -44,6 +48,11 @@
                     <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
                     <HeaderStyle BackColor="#663300" Font-Bold="True" ForeColor="#FFFFCC" />
                 </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;I:\PSU 2008\IST 421\Projects\Takara\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
+                    ProviderName="System.Data.SqlClient" 
+                    SelectCommand="SELECT [fldItemID], [fldItemName], [fldDescription], [fldItemPrice] FROM [tblMenu]">
+                </asp:SqlDataSource>
             </td>
             <td bgcolor="#663300" height="26px"><font color="#FFFFCC" font-weight="700" face="Times New Roman" size="3">Quantity</font></td>
             </tr>
@@ -82,10 +91,17 @@
                     <asp:TextBox ID="txtCalifornia" runat="server" Width="35px">0</asp:TextBox>
                 </td>
             </tr>
+            <tr>
+                <td class="style3"></td>
+                <td class="style4"></td>
+                <td><asp:Button ID="btnContinue" runat="server" Text="Continue" 
+                onclick="btnContinue_Click" />
+                </td>
+                <td></td>
+            </tr>
         </table>
         
     </div>
-        <asp:Button ID="btnContinue" runat="server" Text="Continue" 
-            onclick="btnContinue_Click" />
+        
 </div>
 </asp:Content>

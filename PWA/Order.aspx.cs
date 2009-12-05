@@ -13,5 +13,10 @@ namespace PWA
         {
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("HowItWorks.aspx");
+        }
     }
 }

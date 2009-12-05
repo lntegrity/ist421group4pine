@@ -6,14 +6,15 @@
         <h1>Our Customers:</h1>
         <asp:DataGrid ID="LeadsList" runat="server" BackColor="White" 
             BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" 
-            CellPadding="4" ForeColor="#330099" Font-Bold="False" Font-Italic="False" 
+            CellPadding="4" ForeColor="#000066" Font-Bold="False" Font-Italic="False" 
             Font-Overline="False" Font-Strikeout="False" Font-Underline="False" >
             <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
+            <EditItemStyle ForeColor="#000066" />
             <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" 
                 Font-Italic="False" Font-Overline="False" Font-Strikeout="False" 
                 Font-Underline="False" />
             <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
-            <ItemStyle BackColor="White" ForeColor="#330099" />
+            <ItemStyle BackColor="White" ForeColor="#000066" />
             <HeaderStyle Font-Bold="True" BackColor="#663300" ForeColor="#FFFFCC" />
         </asp:DataGrid>
     </div>
