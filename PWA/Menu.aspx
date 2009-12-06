@@ -53,8 +53,9 @@
                     <HeaderStyle BackColor="#663300" Font-Bold="True" ForeColor="#FFFFCC" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                    ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;I:\PSU 2008\IST 421\Projects\Takara\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
+                    ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;G:\PSU 2008\IST 421\Projects\Takara\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
                     ProviderName="System.Data.SqlClient" 
+                    
                     SelectCommand="SELECT [fldItemID], [fldItemName], [fldDescription], [fldItemPrice] FROM [tblMenu]">
                 </asp:SqlDataSource>
             </td>
