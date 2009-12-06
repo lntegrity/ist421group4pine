@@ -38,3 +38,8 @@ C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWA\bin\PWA.pdb
 C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWA\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWA\obj\Debug\PWA.dll
 C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWA\obj\Debug\PWA.pdb
+C:\Documents and Settings\BaTz\Desktop\Takara\PWA\bin\PWA.dll
+C:\Documents and Settings\BaTz\Desktop\Takara\PWA\bin\PWA.pdb
+C:\Documents and Settings\BaTz\Desktop\Takara\PWA\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\BaTz\Desktop\Takara\PWA\obj\Debug\PWA.dll
+C:\Documents and Settings\BaTz\Desktop\Takara\PWA\obj\Debug\PWA.pdb
