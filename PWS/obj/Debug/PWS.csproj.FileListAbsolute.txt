@@ -38,3 +38,8 @@ C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWS\obj\Debug\PWS.dll
 C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWS\obj\Debug\PWS.pdb
 C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWS\bin\PWS.dll
 C:\Documents and Settings\Norman Hunt\Desktop\PineProj\PWS\bin\PWS.pdb
+C:\Documents and Settings\BaTz\Desktop\Takara\PWS\bin\PWS.dll
+C:\Documents and Settings\BaTz\Desktop\Takara\PWS\bin\PWS.pdb
+C:\Documents and Settings\BaTz\Desktop\Takara\PWS\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\BaTz\Desktop\Takara\PWS\obj\Debug\PWS.dll
+C:\Documents and Settings\BaTz\Desktop\Takara\PWS\obj\Debug\PWS.pdb
