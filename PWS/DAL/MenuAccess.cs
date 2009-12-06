@@ -19,10 +19,10 @@ namespace PWS.DAL
         private static MenuItems menuFlds(DataRow Row)
         {
             MenuItems menu = new MenuItems();
-            menu.ItemId = (int)Row["ItemID"];
-            menu.ItemName = Row["ItemName"] as string;
-            menu.Description = Row["Description"] as string;
-            menu.Price = (decimal)Row["Price"];
+            menu.ItemId = (int)Row["fldItemID"];
+            menu.ItemName = Row["fldItemName"] as string;
+            menu.Description = Row["fldDescription"] as string;
+            menu.Price = (decimal)Row["fldItemPrice"];
             return menu;
         }
 
@@ -40,7 +40,7 @@ namespace PWS.DAL
         {
             DataSet ds = SqlHelper.ExecuteDataset(
             ConfigurationManager.ConnectionStrings["PineDb"].
-            ConnectionString, "StoredProcedure1");
+            ConnectionString, "GET_MENU_ITEMS");
             return DataSetToMenuArray(ds);
 
         }
