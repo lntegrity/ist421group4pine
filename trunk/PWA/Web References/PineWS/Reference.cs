@@ -349,7 +349,7 @@ namespace PWA.PineWS {
         
         private string descriptionField;
         
-        private double priceField;
+        private decimal priceField;
         
         /// <remarks/>
         public int ItemId {
@@ -382,7 +382,7 @@ namespace PWA.PineWS {
         }
         
         /// <remarks/>
-        public double Price {
+        public decimal Price {
             get {
                 return this.priceField;
             }

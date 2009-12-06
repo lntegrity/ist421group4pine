@@ -87,7 +87,7 @@
           <s:element minOccurs="1" maxOccurs="1" name="ItemId" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="ItemName" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
         </s:sequence>
       </s:complexType>
     </s:schema>

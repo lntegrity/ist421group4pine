@@ -27,21 +27,25 @@
     <div>        
         <table class="style1" cellpadding="2" cellspacing="0">
             <tr>
+
+            <td rowspan="8" class="style2" valign="top">
+
             <td rowspan="8" class="style2" valign="top" colspan="3">
+
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                     BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" 
-                    CellPadding="4" DataSourceID="SqlDataSource1" 
-                    EmptyDataText="There are no data records to display." ForeColor="#000066">
+                    CellPadding="4" 
+                    EmptyDataText="There are no data records to display." ForeColor="#000066" 
+                    DataKeyNames="ItemID">
                     <RowStyle BackColor="White" ForeColor="#000066" />
                     <Columns>
-                        <asp:BoundField DataField="fldItemID" HeaderText="Item ID" ReadOnly="True" 
-                            SortExpression="fldItemID" InsertVisible="False" />
-                        <asp:BoundField DataField="fldItemName" HeaderText="Item Name" 
-                            SortExpression="fldItemName" />
-                        <asp:BoundField DataField="fldDescription" HeaderText="Description" 
-                            SortExpression="fldDescription" />
-                        <asp:BoundField DataField="fldItemPrice" HeaderText="Price" 
-                            SortExpression="fldItemPrice" />
+                        <asp:BoundField DataField="ItemID" HeaderText="ItemID" InsertVisible="False" 
+                            ReadOnly="True" SortExpression="ItemID" />
+                        <asp:BoundField DataField="ItemName" HeaderText="ItemName" 
+                            SortExpression="ItemName" />
+                        <asp:BoundField DataField="Description" HeaderText="Description" 
+                            SortExpression="Description" />
+                        <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
                     </Columns>
                     <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
                     <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
@@ -89,6 +93,7 @@
             <tr>
                 <td height="10px">
                     <asp:TextBox ID="txtCalifornia" runat="server" Width="35px">0</asp:TextBox>
+                    <asp:TextBox ID="TextBoxTotal" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
