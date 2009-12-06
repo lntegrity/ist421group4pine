@@ -14,6 +14,7 @@ namespace PWA {
     public partial class Menu {
         
         /// <summary>
+
         /// GridView1 control.
         /// </summary>
         /// <remarks>
@@ -23,6 +24,7 @@ namespace PWA {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
+
         /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
@@ -93,6 +95,15 @@ namespace PWA {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCalifornia;
+        
+        /// <summary>
+        /// TextBoxTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxTotal;
         
         /// <summary>
         /// btnContinue control.

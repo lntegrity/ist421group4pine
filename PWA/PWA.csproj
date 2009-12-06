@@ -77,13 +77,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="HowItWorks.aspx.cs">
-      <DependentUpon>HowItWorks.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HowItWorks.aspx.designer.cs">
-      <DependentUpon>HowItWorks.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Leads.aspx.cs">
       <DependentUpon>Leads.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -153,7 +146,6 @@
     <Content Include="App_Themes\SummerTheme\Images\JapaneseGarden.jpg" />
     <Content Include="App_Themes\SummerTheme\Images\SushiGrass.gif" />
     <Content Include="App_Themes\SummerTheme\Images\UnagiRoll.jpg" />
-    <Content Include="HowItWorks.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="Order.aspx" />
     <Content Include="Web.sitemap" />
