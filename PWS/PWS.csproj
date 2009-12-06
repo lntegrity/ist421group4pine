@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\LeadAccess.cs" />
+    <Compile Include="DAL\MenuAccess.cs" />
     <Compile Include="DAL\SqlHelper.cs" />
     <Compile Include="Entities\Lead.cs" />
     <Compile Include="Entities\MenuItems.cs" />

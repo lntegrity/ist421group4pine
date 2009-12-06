@@ -39,21 +39,28 @@ namespace PWS
             return num3;
         }
 
-        [WebMethod]
-        public Lead GetLead()
-        {
-            Lead leadObject = new Lead();
-            leadObject.ID = 1;
-            leadObject.Name = "Tree World";
-            leadObject.Address = "100 Oak Lane";
-            return leadObject;
-        }
+        //[WebMethod]
+        //public Lead GetLead()
+        //{
+        //    Lead leadObject = new Lead();
+        //    leadObject.ID = 1;
+        //    leadObject.Name = "Tree World";
+        //    leadObject.Address = "100 Oak Lane";
+        //    return leadObject;
+        //}
 
         [WebMethod]
         public Lead[] GetLeads()
         {
             Lead[] leads = LeadAccess.GetLeads();
             return leads;
+        }
+
+        [WebMethod]
+        public MenuItems[] GetMenu()
+        {
+            MenuItems[] menu = MenuAccess.GetMenu();
+            return menu;
         }
     }
 }
