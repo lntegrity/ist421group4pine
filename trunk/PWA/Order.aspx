@@ -41,6 +41,14 @@
                     <asp:TextBox ID="txtLeadPhone" runat="server"></asp:TextBox>
                 </td>
             </tr>
+            <tr>
+                <td>
+                <asp:RadioButton ID="rdbtnDelivery" runat="server" GroupName="Type" 
+                    Text="Delivery" Checked="True" />
+                <td>
+                <asp:RadioButton ID="rdbtnPickup" runat="server" GroupName="Type" 
+                    Text="Pickup" />
+            </tr>
         </table>
         <p>
             <asp:Button ID="btnSubmit" runat="server" Text="Submit Order" 
@@ -48,7 +56,7 @@
     </div>
     <div class="HomeImage">
         <p>Menu with name, quantity, and total
-        <asp:DataGrid ID="Menu" runat="server" ></asp:DataGrid>
+         <asp:DataGrid ID="Menu" runat="server" ></asp:DataGrid>
         </p>
     </div>
 </asp:Content>
