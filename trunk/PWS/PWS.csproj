@@ -64,9 +64,12 @@
   <ItemGroup>
     <Compile Include="DAL\LeadAccess.cs" />
     <Compile Include="DAL\MenuAccess.cs" />
+    <Compile Include="DAL\OrderAccess.cs" />
     <Compile Include="DAL\SqlHelper.cs" />
     <Compile Include="Entities\Lead.cs" />
     <Compile Include="Entities\MenuItems.cs" />
+    <Compile Include="Entities\Orders.cs" />
+    <Compile Include="Entities\OrderItems.cs" />
     <Compile Include="Service1.asmx.cs">
       <DependentUpon>Service1.asmx</DependentUpon>
       <SubType>Component</SubType>

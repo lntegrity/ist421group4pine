@@ -57,6 +57,33 @@ namespace PWA
 
             //Response.Redirect("Order.aspx");
 
+
+            OrderItems[] o = new OrderItems[7];
+            
+            int numOrdersByLead = WS.GetOrderCount(Convert.ToInt16(Application["LeadID"]));
+            for (int j = 0; j < 7; j++)
+            {
+                if (Convert.ToInt16(textBoxes[j]) != 0)
+                {
+                    
+                    o[j] = new OrderItems();
+                    o[j].OrderID = numOrdersByLead + 1;
+                    o[j].MenuID = Convert.ToInt16(GridView1.Rows[j].Cells[0].Text);
+                    o[j].Quantity = Convert.ToInt16(textBoxes[j]);
+                    o[j].TotalUnitPrice = Convert.ToDecimal(GridView1.Rows[j].Cells[3].Text);
+                    o[j].LeadID = (Convert.ToInt16(Application["LeadID"]));
+                    Boolean success = WS.InsertOrder(o[j]);
+                }
+            }
+            Orders newOrderHistory = new Orders();
+            newOrderHistory.OrderID = numOrdersByLead + 1;
+            newOrderHistory.Total = Convert.ToDecimal(total);
+            
+            Boolean success1 = WS.CopyToOrder(newOrderHistory);
+            
+
+            
+
         }
     }
 }

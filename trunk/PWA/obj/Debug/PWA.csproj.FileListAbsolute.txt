@@ -43,3 +43,8 @@ C:\Documents and Settings\BaTz\Desktop\Takara\PWA\bin\PWA.pdb
 C:\Documents and Settings\BaTz\Desktop\Takara\PWA\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\BaTz\Desktop\Takara\PWA\obj\Debug\PWA.dll
 C:\Documents and Settings\BaTz\Desktop\Takara\PWA\obj\Debug\PWA.pdb
+C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWA\bin\PWA.dll
+C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWA\bin\PWA.pdb
+C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWA\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWA\obj\Debug\PWA.dll
+C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWA\obj\Debug\PWA.pdb
