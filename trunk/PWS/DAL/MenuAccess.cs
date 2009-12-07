@@ -40,7 +40,7 @@ namespace PWS.DAL
         {
             DataSet ds = SqlHelper.ExecuteDataset(
             ConfigurationManager.ConnectionStrings["PineDb"].
-            ConnectionString, "GET_MENU_ITEMS");
+            ConnectionString, "Menu_Get_Menu");
             return DataSetToMenuArray(ds);
 
         }

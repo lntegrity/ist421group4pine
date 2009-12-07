@@ -27,9 +27,6 @@
     <div>        
         <table class="style1" cellpadding="2" cellspacing="0">
             <tr>
-
-            <td rowspan="8" class="style2" valign="top">
-
             <td rowspan="8" class="style2" valign="top" colspan="3">
 
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
@@ -94,7 +91,7 @@
             <tr>
                 <td height="10px">
                     <asp:TextBox ID="txtCalifornia" runat="server" Width="35px">0</asp:TextBox>
-                    <asp:TextBox ID="TextBoxTotal" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxTotal" runat="server" Width="50px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
