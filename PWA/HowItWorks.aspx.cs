@@ -13,5 +13,10 @@ namespace PWA
         {
 
         }
+
+        protected void btnSetLeadID_Click(object sender, EventArgs e)
+        {
+            Application["LeadID"] = SetLeadID.Text;
+        }
     }
 }

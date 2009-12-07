@@ -11,24 +11,24 @@
 namespace PWA {
     
     
-    public partial class HowItWorks {
+    public partial class WebForm1 {
         
         /// <summary>
-        /// SetLeadID control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SetLeadID;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// btnSetLeadID control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSetLeadID;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

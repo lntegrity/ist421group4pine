@@ -90,6 +90,63 @@
           <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
         </s:sequence>
       </s:complexType>
+      <s:element name="InsertOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="newOrder" type="tns:OrderItems" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OrderItems">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrderID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MenuID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalUnitPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="LeadID" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertOrderResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LeadID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOrderCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CopyToOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="newOrderHistory" type="tns:Orders" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Orders">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrderID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Total" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CopyToOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CopyToOrderResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -122,6 +179,24 @@
   <wsdl:message name="GetMenuSoapOut">
     <wsdl:part name="parameters" element="tns:GetMenuResponse" />
   </wsdl:message>
+  <wsdl:message name="InsertOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertOrder" />
+  </wsdl:message>
+  <wsdl:message name="InsertOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderCount" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CopyToOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CopyToOrder" />
+  </wsdl:message>
+  <wsdl:message name="CopyToOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CopyToOrderResponse" />
+  </wsdl:message>
   <wsdl:portType name="Service1Soap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -142,6 +217,18 @@
     <wsdl:operation name="GetMenu">
       <wsdl:input message="tns:GetMenuSoapIn" />
       <wsdl:output message="tns:GetMenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrder">
+      <wsdl:input message="tns:InsertOrderSoapIn" />
+      <wsdl:output message="tns:InsertOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderCount">
+      <wsdl:input message="tns:GetOrderCountSoapIn" />
+      <wsdl:output message="tns:GetOrderCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyToOrder">
+      <wsdl:input message="tns:CopyToOrderSoapIn" />
+      <wsdl:output message="tns:CopyToOrderSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
@@ -191,6 +278,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="InsertOrder">
+      <soap:operation soapAction="http://tempuri.org/InsertOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderCount">
+      <soap:operation soapAction="http://tempuri.org/GetOrderCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyToOrder">
+      <soap:operation soapAction="http://tempuri.org/CopyToOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -232,6 +346,33 @@
     </wsdl:operation>
     <wsdl:operation name="GetMenu">
       <soap12:operation soapAction="http://tempuri.org/GetMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrder">
+      <soap12:operation soapAction="http://tempuri.org/InsertOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderCount">
+      <soap12:operation soapAction="http://tempuri.org/GetOrderCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyToOrder">
+      <soap12:operation soapAction="http://tempuri.org/CopyToOrder" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

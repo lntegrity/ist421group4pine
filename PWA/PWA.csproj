@@ -123,6 +123,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="OrderHistory.aspx.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderHistory.aspx.designer.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\SummerTheme\Banner.css" />
@@ -157,6 +164,7 @@
     <Content Include="Menu.aspx" />
     <Content Include="Order.aspx" />
     <Content Include="Web.sitemap" />
+    <Content Include="OrderHistory.aspx" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />

@@ -62,5 +62,24 @@ namespace PWS
             MenuItems[] menu = MenuAccess.GetMenu();
             return menu;
         }
+
+        [WebMethod]
+        public bool InsertOrder(OrderItems newOrder)
+        {
+            return OrderAccess.InsertOrder(newOrder);
+        }
+
+        [WebMethod]
+        public int GetOrderCount(int LeadID)
+        {
+            return OrderAccess.GetOrderCount(LeadID);
+        }
+
+        [WebMethod]
+        public bool CopyToOrder(Orders newOrderHistory)
+        {
+            return OrderAccess.OrderTableUpdate(newOrderHistory);
+        }
+
     }
 }

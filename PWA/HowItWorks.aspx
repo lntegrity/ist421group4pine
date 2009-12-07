@@ -14,4 +14,9 @@
     <div class="HomeImage">
         Confirmation goes here - Order ID, date/time submitted, delivery/pickup?
     </div>
+    <div>
+    <asp:TextBox ID="SetLeadID" runat="server" Width="20px"></asp:TextBox>
+    <asp:Button ID="btnSetLeadID" runat="server" Text="Set Lead ID" 
+            onclick="btnSetLeadID_Click" />
+    </div>
 </asp:Content>

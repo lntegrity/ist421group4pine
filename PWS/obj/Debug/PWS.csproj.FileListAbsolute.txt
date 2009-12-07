@@ -43,3 +43,8 @@ C:\Documents and Settings\BaTz\Desktop\Takara\PWS\bin\PWS.pdb
 C:\Documents and Settings\BaTz\Desktop\Takara\PWS\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\BaTz\Desktop\Takara\PWS\obj\Debug\PWS.dll
 C:\Documents and Settings\BaTz\Desktop\Takara\PWS\obj\Debug\PWS.pdb
+C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWS\bin\PWS.dll
+C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWS\bin\PWS.pdb
+C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWS\obj\Debug\PWS.dll
+C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWS\obj\Debug\PWS.pdb
