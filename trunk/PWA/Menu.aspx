@@ -21,8 +21,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="Content">
-    <h1>Our Signature Sushi Rolls:</h1>
-    <p>Please enter how many of each roll you would like in the Quantity column, then press Continue:
+    <asp:Panel ID="pnlAccount" runat="server">                
+                    <font face="Helvetica" size="2">Registered? Enter your phone:</font>                                        
+                    <asp:TextBox ID="txtPhoneLogon" runat="server" Width="100px"></asp:TextBox>
+                    <asp:Button ID="btnSignIn" runat="server" Text="Sign In" onclick="btnSignIn_Click" />                                        
+                    <font face="Helvetica" size="2">New user? </font>                                        
+                    <asp:Button ID="btnNewUser" runat="server" Text="Click Here" 
+                        onclick="btnNewUser_Click" />                
+                </asp:Panel>
+    <asp:Panel runat="server" ID="MenuPanel">
+    <h1><asp:Label runat="server" ID="lblHeader">Our Signature Sushi Rolls:</asp:Label></h1>
+    <p><asp:Label runat="server" ID="lblRollInstruction">Please enter how many of each roll you would like in the Quantity column, then press Continue:</asp:Label>
     </p>
     <div>        
         <table class="style1" cellpadding="2" cellspacing="0">
@@ -94,26 +103,19 @@
             <tr>
                 <td height="10px">
                     <asp:TextBox ID="txtCalifornia" runat="server" Width="35px">0</asp:TextBox>
-                    <asp:TextBox ID="TextBoxTotal" runat="server" Width="50px"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxTotal" runat="server" Width="50px" ReadOnly="True"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>
-                <asp:Panel ID="pnlAccount" runat="server">                
-                    <font face="Helvetica" size="2">Registered? Enter your phone:</font>                                        
-                    <asp:TextBox ID="txtPhoneLogon" runat="server" Width="100px"></asp:TextBox>
-                    <asp:Button ID="btnSignIn" runat="server" Text="Sign In" onclick="btnSignIn_Click" />                                        
-                    <font face="Helvetica" size="2">New user? </font>                                        
-                    <asp:Button ID="btnNewUser" runat="server" Text="Click Here" 
-                        onclick="btnNewUser_Click" />                
-                </asp:Panel>
+                
                 </td>
                 <td>
                     <asp:Button ID="btnContinue" runat="server" Text="Continue" onclick="btnContinue_Click" Visible="False" />
                 </td>
             </tr>            
         </table>
-        
+        </asp:Panel>
     </div>
         
 </div>
