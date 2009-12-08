@@ -40,7 +40,7 @@ namespace PWS.DAL
         {
             int temp = SqlHelper.ExecuteNonQuery(
             ConfigurationManager.ConnectionStrings["PineDb"].
-            ConnectionString, "Order_Insert_Order", newOrder.OrderID, newOrder.MenuID, newOrder.Quantity, newOrder.TotalUnitPrice, newOrder.LeadID);
+            ConnectionString, "Order_Insert_Order", newOrder.OrderID, newOrder.MenuID, newOrder.Quantity, newOrder.TotalUnitPrice, newOrder.LeadID, DateTime.Now);
             if (temp > 0)
                 return true;
             return false;

@@ -45,6 +45,8 @@ namespace PWA.PineWS {
         
         private System.Threading.SendOrPostCallback CopyToOrderOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ValidateLoginOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -106,6 +108,9 @@ namespace PWA.PineWS {
         
         /// <remarks/>
         public event CopyToOrderCompletedEventHandler CopyToOrderCompleted;
+        
+        /// <remarks/>
+        public event ValidateLoginCompletedEventHandler ValidateLoginCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/HelloWorld", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -334,6 +339,35 @@ namespace PWA.PineWS {
             if ((this.CopyToOrderCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.CopyToOrderCompleted(this, new CopyToOrderCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ValidateLogin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ValidateLogin(string PhoneNumber) {
+            object[] results = this.Invoke("ValidateLogin", new object[] {
+                        PhoneNumber});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ValidateLoginAsync(string PhoneNumber) {
+            this.ValidateLoginAsync(PhoneNumber, null);
+        }
+        
+        /// <remarks/>
+        public void ValidateLoginAsync(string PhoneNumber, object userState) {
+            if ((this.ValidateLoginOperationCompleted == null)) {
+                this.ValidateLoginOperationCompleted = new System.Threading.SendOrPostCallback(this.OnValidateLoginOperationCompleted);
+            }
+            this.InvokeAsync("ValidateLogin", new object[] {
+                        PhoneNumber}, this.ValidateLoginOperationCompleted, userState);
+        }
+        
+        private void OnValidateLoginOperationCompleted(object arg) {
+            if ((this.ValidateLoginCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ValidateLoginCompleted(this, new ValidateLoginCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -800,6 +834,32 @@ namespace PWA.PineWS {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    public delegate void ValidateLoginCompletedEventHandler(object sender, ValidateLoginCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ValidateLoginCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ValidateLoginCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
             }
         }
     }

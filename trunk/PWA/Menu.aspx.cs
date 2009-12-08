@@ -60,13 +60,15 @@ namespace PWA
 
             OrderItems[] o = new OrderItems[7];
             
-            int numOrdersByLead = WS.GetOrderCount(Convert.ToInt16(Application["LeadID"]));
+            int numOrders = WS.GetOrderCount(Convert.ToInt16(Application["LeadID"]));
+            
+
             for (int j = 0; j < 7; j++)
             {
                 if (Convert.ToInt16(textBoxes[j]) != 0)
                 {                    
                     o[j] = new OrderItems();
-                    o[j].OrderID = numOrdersByLead + 1;
+                    o[j].OrderID = numOrders + 1;
                     o[j].MenuID = Convert.ToInt16(GridView1.Rows[j].Cells[0].Text);
                     o[j].Quantity = Convert.ToInt16(textBoxes[j]);
                     o[j].TotalUnitPrice = Convert.ToDecimal(GridView1.Rows[j].Cells[3].Text);
@@ -74,20 +76,28 @@ namespace PWA
                     Boolean success = WS.InsertOrder(o[j]);
                 }
             }
+
             Orders newOrderHistory = new Orders();
-            newOrderHistory.OrderID = numOrdersByLead + 1;
+
+            newOrderHistory.OrderID = numOrders + 1;
             newOrderHistory.Total = Convert.ToDecimal(total);
-            
+
             Boolean success1 = WS.CopyToOrder(newOrderHistory);
+
         }
         
         protected void btnSignIn_Click(object sender, EventArgs e)
         {
             //Check phone number against the DB
-
+            Service1 WS = new Service1();
+            int validatePhone = WS.ValidateLogin(txtPhoneLogon.Text);
             //If number is valid, enable the Continue button, hide Account Panel
-            pnlAccount.Visible = false;
-            btnContinue.Visible = true;
+            if (validatePhone == 1)
+            {
+                pnlAccount.Visible = false;
+                btnContinue.Visible = true;
+            }
+            
         }
 
         protected void btnNewUser_Click(object sender, EventArgs e)
