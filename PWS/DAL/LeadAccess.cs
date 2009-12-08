@@ -40,6 +40,13 @@ namespace PWS.DAL
             return DataSetToLeadsArray(ds);
         }
 
-        
+        public static int ValidateLogin(string strPhoneNumber)
+        {
+            int count = Convert.ToInt16(SqlHelper.ExecuteScalar(
+            ConfigurationManager.ConnectionStrings["PineDb"].
+            ConnectionString, "ValidateLogin", strPhoneNumber));
+            return count;
+
+        }
     }
 }

@@ -81,5 +81,10 @@ namespace PWS
             return OrderAccess.OrderTableUpdate(newOrderHistory);
         }
 
+        [WebMethod]
+        public int ValidateLogin(string PhoneNumber)
+        {
+            return LeadAccess.ValidateLogin(PhoneNumber);
+        }
     }
 }
