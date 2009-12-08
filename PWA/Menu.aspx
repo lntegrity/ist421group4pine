@@ -9,13 +9,13 @@
         {
             width: 624px;
         }
-        .style3
+        .style5
         {
-            width: 290px;
+            width: 576px;
         }
-        .style4
+        .style6
         {
-            width: 239px;
+            width: 86px;
         }
     </style>
 </asp:Content>
@@ -57,7 +57,9 @@
                     SelectCommand="SELECT [fldItemID], [fldItemName], [fldDescription], [fldItemPrice] FROM [tblMenu]">
                 </asp:SqlDataSource>
             </td>
-            <td bgcolor="#663300" height="26px"><font color="#FFFFCC" font-weight="700" face="Times New Roman" size="3">Quantity</font></td>
+            <td bgcolor="#663300" height="26px"><font color="#FFFFCC" font-weight="700" 
+                face="Times New Roman" size="3">Quantity</font>
+            </td>
             </tr>
             <tr>
                 <td height="10px">
@@ -96,13 +98,20 @@
                 </td>
             </tr>
             <tr>
-                <td class="style3"></td>
-                <td class="style4"></td>
-                <td><asp:Button ID="btnContinue" runat="server" Text="Continue" 
-                onclick="btnContinue_Click" />
+                <td>
+                <asp:Panel ID="pnlAccount" runat="server">                
+                    <font face="Helvetica" size="2">Registered? Enter your phone:</font>                                        
+                    <asp:TextBox ID="txtPhoneLogon" runat="server" Width="100px"></asp:TextBox>
+                    <asp:Button ID="btnSignIn" runat="server" Text="Sign In" onclick="btnSignIn_Click" />                                        
+                    <font face="Helvetica" size="2">New user? </font>                                        
+                    <asp:Button ID="btnNewUser" runat="server" Text="Click Here" 
+                        onclick="btnNewUser_Click" />                
+                </asp:Panel>
                 </td>
-                <td></td>
-            </tr>
+                <td>
+                    <asp:Button ID="btnContinue" runat="server" Text="Continue" onclick="btnContinue_Click" Visible="False" />
+                </td>
+            </tr>            
         </table>
         
     </div>
