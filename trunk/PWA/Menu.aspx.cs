@@ -21,8 +21,8 @@ namespace PWA
             MenuItems[] item = WS.GetMenu();
             GridView1.DataSource = item;
             GridView1.DataBind();
-            
 
+            //Check for Application State; if authenticated, only display the Continue button
         }
 
         protected void btnContinue_Click(object sender, EventArgs e)
@@ -64,8 +64,7 @@ namespace PWA
             for (int j = 0; j < 7; j++)
             {
                 if (Convert.ToInt16(textBoxes[j]) != 0)
-                {
-                    
+                {                    
                     o[j] = new OrderItems();
                     o[j].OrderID = numOrdersByLead + 1;
                     o[j].MenuID = Convert.ToInt16(GridView1.Rows[j].Cells[0].Text);
@@ -80,10 +79,21 @@ namespace PWA
             newOrderHistory.Total = Convert.ToDecimal(total);
             
             Boolean success1 = WS.CopyToOrder(newOrderHistory);
-            
+        }
+        
+        protected void btnSignIn_Click(object sender, EventArgs e)
+        {
+            //Check phone number against the DB
 
-            
+            //If number is valid, enable the Continue button, hide Account Panel
+            pnlAccount.Visible = false;
+            btnContinue.Visible = true;
+        }
 
+        protected void btnNewUser_Click(object sender, EventArgs e)
+        {
+            //Direct to NewAccount page
+            Response.Redirect("NewAccount.aspx");
         }
     }
 }
