@@ -12,7 +12,14 @@ namespace PWS.Entities
         private string _Address;
         private string _City;
         private string _State;
-        private string _Phone;        
+        private string _Phone;
+        private int _Zip;
+
+        public int Zip
+        {
+            get { return _Zip; }
+            set { _Zip = value; }
+        }
 
         public string City
         {

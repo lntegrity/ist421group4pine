@@ -37,6 +37,8 @@ namespace PWA.PineWS {
         
         private System.Threading.SendOrPostCallback GetLeadsOperationCompleted;
         
+        private System.Threading.SendOrPostCallback LoginLeadOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetMenuOperationCompleted;
         
         private System.Threading.SendOrPostCallback InsertOrderOperationCompleted;
@@ -46,6 +48,8 @@ namespace PWA.PineWS {
         private System.Threading.SendOrPostCallback CopyToOrderOperationCompleted;
         
         private System.Threading.SendOrPostCallback ValidateLoginOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback InsertLeadOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -98,6 +102,9 @@ namespace PWA.PineWS {
         public event GetLeadsCompletedEventHandler GetLeadsCompleted;
         
         /// <remarks/>
+        public event LoginLeadCompletedEventHandler LoginLeadCompleted;
+        
+        /// <remarks/>
         public event GetMenuCompletedEventHandler GetMenuCompleted;
         
         /// <remarks/>
@@ -111,6 +118,9 @@ namespace PWA.PineWS {
         
         /// <remarks/>
         public event ValidateLoginCompletedEventHandler ValidateLoginCompleted;
+        
+        /// <remarks/>
+        public event InsertLeadCompletedEventHandler InsertLeadCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/HelloWorld", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -225,6 +235,35 @@ namespace PWA.PineWS {
             if ((this.GetLeadsCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetLeadsCompleted(this, new GetLeadsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/LoginLead", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public Lead LoginLead(string LeadPhone) {
+            object[] results = this.Invoke("LoginLead", new object[] {
+                        LeadPhone});
+            return ((Lead)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void LoginLeadAsync(string LeadPhone) {
+            this.LoginLeadAsync(LeadPhone, null);
+        }
+        
+        /// <remarks/>
+        public void LoginLeadAsync(string LeadPhone, object userState) {
+            if ((this.LoginLeadOperationCompleted == null)) {
+                this.LoginLeadOperationCompleted = new System.Threading.SendOrPostCallback(this.OnLoginLeadOperationCompleted);
+            }
+            this.InvokeAsync("LoginLead", new object[] {
+                        LeadPhone}, this.LoginLeadOperationCompleted, userState);
+        }
+        
+        private void OnLoginLeadOperationCompleted(object arg) {
+            if ((this.LoginLeadCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.LoginLeadCompleted(this, new LoginLeadCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -372,6 +411,35 @@ namespace PWA.PineWS {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertLead", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool InsertLead(Lead lead) {
+            object[] results = this.Invoke("InsertLead", new object[] {
+                        lead});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertLeadAsync(Lead lead) {
+            this.InsertLeadAsync(lead, null);
+        }
+        
+        /// <remarks/>
+        public void InsertLeadAsync(Lead lead, object userState) {
+            if ((this.InsertLeadOperationCompleted == null)) {
+                this.InsertLeadOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertLeadOperationCompleted);
+            }
+            this.InvokeAsync("InsertLead", new object[] {
+                        lead}, this.InsertLeadOperationCompleted, userState);
+        }
+        
+        private void OnInsertLeadOperationCompleted(object arg) {
+            if ((this.InsertLeadCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertLeadCompleted(this, new InsertLeadCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -398,6 +466,8 @@ namespace PWA.PineWS {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class Lead {
         
+        private int zipField;
+        
         private string cityField;
         
         private string stateField;
@@ -409,6 +479,16 @@ namespace PWA.PineWS {
         private string nameField;
         
         private string addressField;
+        
+        /// <remarks/>
+        public int Zip {
+            get {
+                return this.zipField;
+            }
+            set {
+                this.zipField = value;
+            }
+        }
         
         /// <remarks/>
         public string City {
@@ -736,6 +816,32 @@ namespace PWA.PineWS {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    public delegate void LoginLeadCompletedEventHandler(object sender, LoginLeadCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class LoginLeadCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal LoginLeadCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Lead Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Lead)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
     public delegate void GetMenuCompletedEventHandler(object sender, GetMenuCompletedEventArgs e);
     
     /// <remarks/>
@@ -860,6 +966,32 @@ namespace PWA.PineWS {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    public delegate void InsertLeadCompletedEventHandler(object sender, InsertLeadCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "2.0.50727.4927")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertLeadCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertLeadCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
             }
         }
     }

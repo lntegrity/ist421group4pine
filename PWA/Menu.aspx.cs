@@ -21,8 +21,22 @@ namespace PWA
             MenuItems[] item = WS.GetMenu();
             GridView1.DataSource = item;
             GridView1.DataBind();
+            // for testing Session var
+            //string tempstring = (string)Session["LeadID"];
 
             //Check for Application State; if authenticated, only display the Continue button
+            if (Session["LeadID"] == null)
+            {
+                pnlAccount.Visible = true;
+                btnContinue.Visible = false;
+                MenuPanel.Visible = false;
+            }
+            else
+            {
+                pnlAccount.Visible = false;
+                btnContinue.Visible = true;
+                MenuPanel.Visible = true;
+            }
         }
 
         protected void btnContinue_Click(object sender, EventArgs e)
@@ -60,7 +74,7 @@ namespace PWA
 
             OrderItems[] o = new OrderItems[7];
             
-            int numOrders = WS.GetOrderCount(Convert.ToInt16(Application["LeadID"]));
+            int numOrders = WS.GetOrderCount(Convert.ToInt16(Session["LeadID"]));
             
 
             for (int j = 0; j < 7; j++)
@@ -72,7 +86,7 @@ namespace PWA
                     o[j].MenuID = Convert.ToInt16(GridView1.Rows[j].Cells[0].Text);
                     o[j].Quantity = Convert.ToInt16(textBoxes[j]);
                     o[j].TotalUnitPrice = Convert.ToDecimal(GridView1.Rows[j].Cells[3].Text);
-                    o[j].LeadID = (Convert.ToInt16(Application["LeadID"]));
+                    o[j].LeadID = (Convert.ToInt16(Session["LeadID"]));
                     Boolean success = WS.InsertOrder(o[j]);
                 }
             }
@@ -94,8 +108,22 @@ namespace PWA
             //If number is valid, enable the Continue button, hide Account Panel
             if (validatePhone == 1)
             {
+                Lead lead = WS.LoginLead(txtPhoneLogon.Text.ToString());
+                Session["LeadID"] = lead.ID;
                 pnlAccount.Visible = false;
                 btnContinue.Visible = true;
+            }
+            if (Session["LeadID"] == null)
+            {
+                pnlAccount.Visible = true;
+                btnContinue.Visible = false;
+                MenuPanel.Visible = false;
+            }
+            else
+            {
+                pnlAccount.Visible = false;
+                btnContinue.Visible = true;
+                MenuPanel.Visible = true;
             }
             
         }

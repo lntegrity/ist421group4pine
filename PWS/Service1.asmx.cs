@@ -55,7 +55,12 @@ namespace PWS
             Lead[] leads = LeadAccess.GetLeads();
             return leads;
         }
-
+        [WebMethod]
+        public Lead LoginLead(string LeadPhone)
+        {
+            Lead lead = LeadAccess.LoginLead(LeadPhone);
+            return lead;
+        }
         [WebMethod]
         public MenuItems[] GetMenu()
         {
@@ -85,6 +90,12 @@ namespace PWS
         public int ValidateLogin(string PhoneNumber)
         {
             return LeadAccess.ValidateLogin(PhoneNumber);
+        }
+
+        [WebMethod]
+        public bool InsertLead(Lead lead)
+        {
+            return LeadAccess.InsertLead(lead);
         }
     }
 }

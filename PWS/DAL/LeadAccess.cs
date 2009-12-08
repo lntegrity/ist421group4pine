@@ -19,6 +19,7 @@ namespace PWS.DAL
             l.City = Row["fldLeadCity"] as string;
             l.State = Row["fldLeadState"] as string;
             l.Phone = Row["fldLeadPhone"] as string;
+            l.Zip = (int)Row["fldLeadZip"];
             return l;
         }
 
@@ -32,12 +33,37 @@ namespace PWS.DAL
             return leads;
         }
 
+        private static Lead DataSetToLead(DataSet ds)
+        {
+            Lead lead = new Lead();
+            lead = leadFlds(ds.Tables[0].Rows[0]);
+            return lead;
+        }
+
+        public static bool InsertLead(Lead lead)
+        {
+            int temp = SqlHelper.ExecuteNonQuery(
+            ConfigurationManager.ConnectionStrings["PineDb"].
+            ConnectionString, "Lead_Insert_Lead", lead.Name, lead.Address, lead.City, lead.State, lead.Zip, lead.Phone);
+            if (temp > 0)
+                return true;
+            return false;
+        }
+
         public static Lead[] GetLeads()
         {
             DataSet ds = SqlHelper.ExecuteDataset(
             ConfigurationManager.ConnectionStrings["PineDb"].
             ConnectionString, "Leads_Get_Leads");
             return DataSetToLeadsArray(ds);
+        }
+
+        public static Lead LoginLead(string LeadPhone)
+        {
+            DataSet ds = SqlHelper.ExecuteDataset(
+            ConfigurationManager.ConnectionStrings["PineDb"].
+            ConnectionString, "Leads_Login_Lead", LeadPhone);
+            return DataSetToLead(ds);
         }
 
         public static int ValidateLogin(string strPhoneNumber)
