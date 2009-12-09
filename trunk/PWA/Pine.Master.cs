@@ -11,7 +11,20 @@ namespace PWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["LeadID"] == null)
+            {
+                btnLogout.Visible = false;
+            }
+            else
+            {
+                btnLogout.Visible = true;
+            }
+        }
 
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session["LeadID"] = null;
+            Response.Redirect("Default.aspx");
         }
     }
 }

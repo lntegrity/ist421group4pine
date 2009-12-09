@@ -44,6 +44,25 @@
 	float:left;
 	position:relative;
 }
+.LogoutButton
+{
+    position:relative;
+    left:275px;
+    top:5px;
+    font-family:"Tempus Sans ITC", "Times New Roman", Serif;
+    text-decoration:underline;
+    background:White;
+    margin:0px;
+    padding:0px;
+}
+.LogoutButton a
+{
+    color:green;
+}
+.LogoutButton a:hover, a:active, a.here:link, a.here:visited
+{
+    color:#CC6633;
+}
 .Content h1
 {
 	font-family:"Tempus Sans ITC", "Times New Roman", Serif;

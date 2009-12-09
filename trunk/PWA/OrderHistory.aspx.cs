@@ -19,5 +19,13 @@ namespace PWA
         {
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            //Submit order code goes here
+
+
+            //Display order confirmation (maybe the OrderID_LeadID concatenation?) and Date Submitted
+        }
     }
 }

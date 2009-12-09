@@ -28,6 +28,8 @@
             </div>
         </div>
         <div class="Content">
+            <asp:LinkButton ID="btnLogout" runat="server" CssClass="LogoutButton" 
+                onclick="btnLogout_Click" Visible="False">Log Me Out</asp:LinkButton>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             
             </asp:ContentPlaceHolder>

@@ -44,10 +44,10 @@
             <tr>
                 <td>
                 <asp:RadioButton ID="rdbtnDelivery" runat="server" GroupName="Type" 
-                    Text="Delivery" Checked="True" />
+                    Text="Delivery" Checked="True" /></td>
                 <td>
                 <asp:RadioButton ID="rdbtnPickup" runat="server" GroupName="Type" 
-                    Text="Pickup" />
+                    Text="Pickup" /></td>
             </tr>
         </table>
         <p>
