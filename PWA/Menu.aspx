@@ -11,13 +11,13 @@
         }
         .style7
         {
-            width: 280px;
+            width: 49px;
         }
         .style8
         {
-            width: 75px;
+            width: 26px;
         }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="Content">
@@ -43,33 +43,33 @@
     <table class="style1" cellpadding="2" cellspacing="0">
         <tr>
         <td rowspan="8" class="style2" valign="top" colspan="2">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;I:\PSU 2008\IST 421\Projects\Takara's\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;Connect Timeout=30;User Instance=True" 
+                ProviderName="System.Data.SqlClient" 
+                SelectCommand="SELECT [fldItemID], [fldItemName], [fldItemPrice], [fldDescription] FROM [tblMenu]">
+            </asp:SqlDataSource>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                 BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" 
                 CellPadding="4" 
                 EmptyDataText="There are no data records to display." ForeColor="#000066" 
-                DataKeyNames="ItemID">
+                DataSourceID="SqlDataSource1">
                 <RowStyle BackColor="White" ForeColor="#000066" />
                 <Columns>
                     
-                    <asp:BoundField DataField="ItemID" HeaderText="Item ID" InsertVisible="False" 
-                        ReadOnly="True" SortExpression="ItemID" />
-                    <asp:BoundField DataField="ItemName" HeaderText="Item Name" 
-                        SortExpression="ItemName" />
-                    <asp:BoundField DataField="Description" HeaderText="Description" 
-                        SortExpression="Description" />
-                    <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+                    <asp:BoundField DataField="fldItemID" HeaderText="Item ID" InsertVisible="False" 
+                        ReadOnly="True" SortExpression="fldItemID" />
+                    <asp:BoundField DataField="fldItemName" HeaderText="Item Name" 
+                        SortExpression="fldItemName" />
+                    <asp:BoundField DataField="fldDescription" HeaderText="Description" 
+                        SortExpression="fldDescription" />
+                    <asp:BoundField DataField="fldItemPrice" HeaderText="Price" 
+                        SortExpression="fldItemPrice" />
                 </Columns>
                     <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
                     <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
                     <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
                     <HeaderStyle BackColor="#663300" Font-Bold="True" ForeColor="#FFFFCC" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;G:\PSU 2008\IST 421\Projects\Takara\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
-                ProviderName="System.Data.SqlClient" 
-                
-                SelectCommand="SELECT [fldItemID], [fldItemName], [fldDescription], [fldItemPrice] FROM [tblMenu]">
-            </asp:SqlDataSource>
         </td>
         <td bgcolor="#663300" height="26px"><font color="#FFFFCC" font-weight="700" 
             face="Times New Roman" size="3">Quantity</font>
@@ -78,31 +78,47 @@
         <tr>
             <td height="10px">
                 <asp:TextBox ID="txtUnagi" runat="server" Width="35px">0</asp:TextBox>
+                <asp:RegularExpressionValidator ID="rfvUnagi" runat="server" 
+                    ControlToValidate="txtUnagi" ValidationExpression="\b\d+\b">*</asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
             <td height="10px">
                 <asp:TextBox ID="txtTuna" runat="server" Width="35px" style="margin-left: 0px">0</asp:TextBox>
+                <asp:RegularExpressionValidator ID="rfvTuna" runat="server" 
+                    ControlToValidate="txtTuna" ValidationExpression="\b\d+\b">*</asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
             <td height="10px">
                 <asp:TextBox ID="txtSalmon" runat="server" Width="35px">0</asp:TextBox>
+                <asp:RegularExpressionValidator ID="rfvSalmon" runat="server" 
+                    ControlToValidate="txtSalmon" ValidationExpression="\b\d+\b">*</asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
             <td height="10px">
                 <asp:TextBox ID="txtShrimp" runat="server" Width="35px">0</asp:TextBox>
+                <asp:RegularExpressionValidator ID="rfvShrimp" runat="server" 
+                    ControlToValidate="txtShrimp" ValidationExpression="\b\d+\b">*</asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
             <td height="10px">
                 <asp:TextBox ID="txtChicken" runat="server" Width="35px">0</asp:TextBox>
+                <asp:RegularExpressionValidator ID="rfvChicken" runat="server" 
+                    ControlToValidate="txtChicken" ValidationExpression="\b\d+\b">*</asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="rfvDragon" runat="server" 
+                    ControlToValidate="txtDragon" ValidationExpression="\b\d+\b">*</asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="rfvCalifornia" runat="server" 
+                    ControlToValidate="txtCalifornia" ValidationExpression="\b\d+\b">*</asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
             <td height="10px">
                 <asp:TextBox ID="txtDragon" runat="server" Width="35px">0</asp:TextBox>
+                <asp:Button ID="btnTotal" runat="server" Text="Total" 
+                    onclick="btnTotal_Click" />
             </td>
         </tr>
         <tr>
@@ -113,7 +129,7 @@
         </tr>
         <tr>
             <td class="style7">
-            <p style="width: 539px"><asp:Label runat="server" ID="lblRollInstruction">Please enter how many you would like in the Quantity column, then press Continue:</asp:Label>
+            <p style="width: 520px"><asp:Label runat="server" ID="lblRollInstruction">Please enter how many you would like in the Quantity boxes, then press Continue:</asp:Label>
             </p>
             </td>
             <td class="style8">

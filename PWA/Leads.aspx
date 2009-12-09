@@ -4,6 +4,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="Content">
         <h1>Our Customers:</h1>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+            ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;I:\PSU 2008\IST 421\Projects\Takara's\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;Connect Timeout=30;User Instance=True" 
+            ProviderName="System.Data.SqlClient" 
+            SelectCommand="SELECT [fldLeadID], [fldLeadName], [fldLeadAddress], [fldLeadState], [fldLeadCity], [fldLeadZip], [fldLeadPhone] FROM [tblLeads]">
+        </asp:SqlDataSource>
         <asp:GridView ID="gvLeads" runat="server" AllowPaging="True" 
             AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" 
             BorderStyle="Solid" BorderWidth="1px" CellPadding="4" DataKeyNames="fldLeadID" 
@@ -31,34 +36,5 @@
             <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
             <HeaderStyle BackColor="#663300" Font-Bold="True" ForeColor="#FFFFCC" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-            ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;I:\PSU 2008\IST 421\Projects\Takara's\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
-            DeleteCommand="DELETE FROM [tblLeads] WHERE [fldLeadID] = @fldLeadID" 
-            InsertCommand="INSERT INTO [tblLeads] ([fldLeadName], [fldLeadAddress], [fldLeadState], [fldLeadCity], [fldLeadPhone], [fldLeadZip]) VALUES (@fldLeadName, @fldLeadAddress, @fldLeadState, @fldLeadCity, @fldLeadPhone, @fldLeadZip)" 
-            ProviderName="System.Data.SqlClient" 
-            SelectCommand="SELECT [fldLeadID], [fldLeadName], [fldLeadAddress], [fldLeadState], [fldLeadCity], [fldLeadPhone], [fldLeadZip] FROM [tblLeads]" 
-            
-            UpdateCommand="UPDATE [tblLeads] SET [fldLeadName] = @fldLeadName, [fldLeadAddress] = @fldLeadAddress, [fldLeadState] = @fldLeadState, [fldLeadCity] = @fldLeadCity, [fldLeadPhone] = @fldLeadPhone, [fldLeadZip] = @fldLeadZip WHERE [fldLeadID] = @fldLeadID">
-            <DeleteParameters>
-                <asp:Parameter Name="fldLeadID" Type="Int32" />
-            </DeleteParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="fldLeadName" Type="String" />
-                <asp:Parameter Name="fldLeadAddress" Type="String" />
-                <asp:Parameter Name="fldLeadState" Type="String" />
-                <asp:Parameter Name="fldLeadCity" Type="String" />
-                <asp:Parameter Name="fldLeadPhone" Type="String" />
-                <asp:Parameter Name="fldLeadZip" Type="Int32" />
-                <asp:Parameter Name="fldLeadID" Type="Int32" />
-            </UpdateParameters>
-            <InsertParameters>
-                <asp:Parameter Name="fldLeadName" Type="String" />
-                <asp:Parameter Name="fldLeadAddress" Type="String" />
-                <asp:Parameter Name="fldLeadState" Type="String" />
-                <asp:Parameter Name="fldLeadCity" Type="String" />
-                <asp:Parameter Name="fldLeadPhone" Type="String" />
-                <asp:Parameter Name="fldLeadZip" Type="Int32" />
-            </InsertParameters>
-        </asp:SqlDataSource>
     </div>
 </asp:Content>
