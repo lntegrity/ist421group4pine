@@ -58,3 +58,13 @@ C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\bin\PWS.pdb
 C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\obj\Debug\PWS.dll
 C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\obj\Debug\PWS.pdb
+G:\PSU 2008\IST 421\Projects\Takara's\PWS\bin\PWS.dll
+G:\PSU 2008\IST 421\Projects\Takara's\PWS\bin\PWS.pdb
+G:\PSU 2008\IST 421\Projects\Takara's\PWS\obj\Debug\ResolveAssemblyReference.cache
+G:\PSU 2008\IST 421\Projects\Takara's\PWS\obj\Debug\PWS.dll
+G:\PSU 2008\IST 421\Projects\Takara's\PWS\obj\Debug\PWS.pdb
+I:\PSU 2008\IST 421\Projects\Takara's\PWS\bin\PWS.dll
+I:\PSU 2008\IST 421\Projects\Takara's\PWS\bin\PWS.pdb
+I:\PSU 2008\IST 421\Projects\Takara's\PWS\obj\Debug\ResolveAssemblyReference.cache
+I:\PSU 2008\IST 421\Projects\Takara's\PWS\obj\Debug\PWS.dll
+I:\PSU 2008\IST 421\Projects\Takara's\PWS\obj\Debug\PWS.pdb
