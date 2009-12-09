@@ -5,7 +5,7 @@
     <div class="Content">
         <h1>Our Customers:</h1>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-            ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;I:\PSU 2008\IST 421\Projects\Takara's\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;Connect Timeout=30;User Instance=True" 
+            ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;E:\PSU 2008\IST 421\Projects\Takara's\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;Connect Timeout=30;User Instance=True" 
             ProviderName="System.Data.SqlClient" 
             SelectCommand="SELECT [fldLeadID], [fldLeadName], [fldLeadAddress], [fldLeadState], [fldLeadCity], [fldLeadZip], [fldLeadPhone] FROM [tblLeads]">
         </asp:SqlDataSource>

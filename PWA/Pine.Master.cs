@@ -9,6 +9,8 @@ namespace PWA
 {
     public partial class Pine : System.Web.UI.MasterPage
     {
+        string _filepath = "";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["LeadID"] == null)
@@ -19,13 +21,31 @@ namespace PWA
             {
                 btnLogout.Visible = true;
             }
-            if (IsPostBack)
+            if (!IsPostBack)
             {
                 if (Session["LeadID"] == null)
                     btnLogout.Visible = false;
                 else
                     btnLogout.Visible = true;
             }
+
+            if (!Page.IsPostBack)
+            {
+                _filepath = Page.Request.FilePath;
+            }
+
+            //Set Nav Color
+            
+        }
+
+        protected string getContent(string url, string title)
+        {
+            if (_filepath == url)
+            {
+                return "<a href=\"" + url + "\" class=\"CurrentPage\">" + title + "</a>";
+            }
+
+            return "<a href=\"" + url + "\">" + title + "</a>";
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

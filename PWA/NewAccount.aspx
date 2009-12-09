@@ -1,15 +1,21 @@
 ﻿<%@ Page Title="Account Creation" Language="C#" MasterPageFile="~/Pine.Master" AutoEventWireup="true" CodeBehind="NewAccount.aspx.cs" Inherits="PWA.NewAccount" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .style1
+        {
+            width: 140px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="HomeContent">
+    <div class="HomeContent">
         <h1>Create Your Account:</h1>
         <p>Please enter your personal information, then press Create Account to continue.</p>
         <table>
             <tr>
                 <td>
                     <font face="Helvetica" size="3">Name:</font></td>
-                <td>
+                <td class="style1">
                     <asp:TextBox ID="txtLeadName" runat="server"></asp:TextBox>
                 </td>
                 <td>
@@ -20,7 +26,7 @@
             <tr>
                 <td>
                     <font face="Helvetica">Address:</font></td>
-                <td>
+                <td class="style1">
                     <asp:TextBox ID="txtLeadAddress" runat="server"></asp:TextBox>
                 </td>
                 <td>
@@ -31,7 +37,7 @@
             <tr>
                 <td>
                     <font face="Helvetica">City:</font></td>
-                <td>
+                <td class="style1">
                     <asp:TextBox ID="txtLeadCity" runat="server"></asp:TextBox>
                 </td>
                 <td>
@@ -42,7 +48,7 @@
             <tr>
                 <td>
                     <font face="Helvetica">State:</font></td>
-                <td>
+                <td class="style1">
                     <asp:DropDownList id="txtLeadState" runat="server">
                     
                     <asp:ListItem>Choose Your State</asp:ListItem>
@@ -163,18 +169,20 @@
                 <td>
                     <font face="Helvetica">Zip:</font></td>
                 <td>
-                    <asp:TextBox ID="txtLeadZip" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtLeadZip" runat="server" Width="140px"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="rfvZip" runat="server" 
                         ControlToValidate="txtLeadZip" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="rfvLeadZip" runat="server" 
+                        ControlToValidate="txtLeadZip" ValidationExpression="\d{5}(-\d{4})?">12345 or 12345-6789</asp:RegularExpressionValidator>
                     </td>
             </tr>
             
             <tr>
                 <td>
                     <font face="Helvetica">Phone:</font></td>
-                <td>
+                <td class="style1">
                     <asp:TextBox ID="txtLeadPhone" runat="server"></asp:TextBox>
                 </td>
                 <td>
@@ -182,7 +190,7 @@
                         ControlToValidate="txtLeadPhone" ErrorMessage="Format: xxx-xxx-xxxx">*</asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="regexPhone" runat="server" 
                         ValidationExpression="\d{3}-\d{3}-\d{4}" 
-                        ControlToValidate="txtLeadPhone">Format: xxx-xxx-xxxx</asp:RegularExpressionValidator>
+                        ControlToValidate="txtLeadPhone">Format: 123-456-7890</asp:RegularExpressionValidator>
                     </td>
             </tr>
         </table>

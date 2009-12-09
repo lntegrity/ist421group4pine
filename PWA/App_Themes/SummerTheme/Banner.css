@@ -86,6 +86,7 @@
 	padding-right:40px;
 	margin-top:20px;
 	margin-left:20px;
+	/*border:solid 1px black;*/
 }	
 .HomeImage
 {
@@ -96,6 +97,7 @@
 	padding-top:50px;
 	margin-top:20px;
 }
+
 .PrimaryNavigation
 {
 	font-family:"Tempus Sans ITC", Arial, Sans-Serif;
@@ -141,10 +143,17 @@
 	border:solid 1px black; 
 	position:relative;
 }
-.PrimaryNavigation a:hover, a:active, a.here:link, a.here:visited
+.PrimaryNavigation a.CurrentPage
 {
 	background:#CC6633;
 	color:Black;
+	margin-right:35px;
+	margin-top:0px;
+}
+.PrimaryNavigation a:hover, a:active, a.here:link, a.here:visited
+{
+	background:#660000;
+	color:White;
 	margin-right:35px;
 	margin-top:0px;
 }
