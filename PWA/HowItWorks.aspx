@@ -6,8 +6,8 @@
         <h1>How Do I Order Online?</h1>
         <p>As part of Takara's mission to bring quality sushi to your table, we offer
         you the ability to place your order online.</p>  
-        <p>To do so, navigate to our menu page, select the desired items, 
-        choose your service type (pickup or delivery), and then submit your order.</p>
+        <p>To do so, navigate to our menu page, logon or create an account, select the desired items, 
+        and then submit your order.</p>
         <p>If you have any questions about your order, or if you encounter any problems, 
         please call us at (215) 441-0217, or send an email to Comments@Takaras.com</p>
     </div>

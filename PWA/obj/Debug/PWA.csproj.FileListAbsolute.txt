@@ -48,3 +48,8 @@ C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWA\bin\
 C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWA\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWA\obj\Debug\PWA.dll
 C:\Users\Ed\Documents\Visual Studio 2008\Projects\Pine\ist421group4pine\PWA\obj\Debug\PWA.pdb
+C:\Documents and Settings\BaTz\Desktop\New Folder\PWA\bin\PWA.dll
+C:\Documents and Settings\BaTz\Desktop\New Folder\PWA\bin\PWA.pdb
+C:\Documents and Settings\BaTz\Desktop\New Folder\PWA\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\BaTz\Desktop\New Folder\PWA\obj\Debug\PWA.dll
+C:\Documents and Settings\BaTz\Desktop\New Folder\PWA\obj\Debug\PWA.pdb

@@ -40,8 +40,7 @@ namespace PWA
         }
 
         protected void btnContinue_Click(object sender, EventArgs e)
-        {
-            
+        {            
             Service1 WS = new Service1();
             ArrayList listItems = new ArrayList();//[Items.Count]
             MenuItems[] item = WS.GetMenu();
@@ -63,19 +62,16 @@ namespace PWA
             for (int j = 0; j < item.Length; j++)
             {
                 quantities[j] = Convert.ToDouble(textBoxes[j]) * Convert.ToDouble(listItems[j]);
-                total += quantities[j];
- 
+                total += quantities[j]; 
             }
             
             TextBoxTotal.Text = Convert.ToString(total);
 
             //Response.Redirect("Order.aspx");
 
-
             OrderItems[] o = new OrderItems[7];
             
-            int numOrders = WS.GetOrderCount(Convert.ToInt16(Session["LeadID"]));
-            
+            int numOrders = WS.GetOrderCount(Convert.ToInt16(Session["LeadID"]));            
 
             for (int j = 0; j < 7; j++)
             {
@@ -91,13 +87,13 @@ namespace PWA
                 }
             }
 
+            //Move this to OrderHistory?
             Orders newOrderHistory = new Orders();
 
             newOrderHistory.OrderID = numOrders + 1;
             newOrderHistory.Total = Convert.ToDecimal(total);
 
             Boolean success1 = WS.CopyToOrder(newOrderHistory);
-
         }
         
         protected void btnSignIn_Click(object sender, EventArgs e)
@@ -105,6 +101,7 @@ namespace PWA
             //Check phone number against the DB
             Service1 WS = new Service1();
             int validatePhone = WS.ValidateLogin(txtPhoneLogon.Text);
+
             //If number is valid, enable the Continue button, hide Account Panel
             if (validatePhone == 1)
             {
