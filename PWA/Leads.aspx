@@ -32,11 +32,12 @@
             <HeaderStyle BackColor="#663300" Font-Bold="True" ForeColor="#FFFFCC" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-            ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
+            ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;I:\PSU 2008\IST 421\Projects\Takara's\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
             DeleteCommand="DELETE FROM [tblLeads] WHERE [fldLeadID] = @fldLeadID" 
             InsertCommand="INSERT INTO [tblLeads] ([fldLeadName], [fldLeadAddress], [fldLeadState], [fldLeadCity], [fldLeadPhone], [fldLeadZip]) VALUES (@fldLeadName, @fldLeadAddress, @fldLeadState, @fldLeadCity, @fldLeadPhone, @fldLeadZip)" 
             ProviderName="System.Data.SqlClient" 
             SelectCommand="SELECT [fldLeadID], [fldLeadName], [fldLeadAddress], [fldLeadState], [fldLeadCity], [fldLeadPhone], [fldLeadZip] FROM [tblLeads]" 
+            
             UpdateCommand="UPDATE [tblLeads] SET [fldLeadName] = @fldLeadName, [fldLeadAddress] = @fldLeadAddress, [fldLeadState] = @fldLeadState, [fldLeadCity] = @fldLeadCity, [fldLeadPhone] = @fldLeadPhone, [fldLeadZip] = @fldLeadZip WHERE [fldLeadID] = @fldLeadID">
             <DeleteParameters>
                 <asp:Parameter Name="fldLeadID" Type="Int32" />
