@@ -7,7 +7,9 @@
         <p>As part of Takara's mission to bring quality sushi to your table, we offer
         you the ability to place your order online.</p>  
         <p>To do so, navigate to our menu page, logon or create an account, select the desired items, 
-        and then submit your order.</p>
+        and then confirm your order.  Review your personal and order information, select 
+        Pick-up or Delivery, then press Submit.  All Pick-up orders, regardless of size, are 
+        ready in 20 minutes.  </p>
         <p>If you have any questions about your order, or if you encounter any problems, 
         please call us at (215) 441-0217, or send an email to Comments@Takaras.com</p>
     </div>
