@@ -92,7 +92,7 @@ namespace PWA
                     Boolean success = WS.InsertOrder(o[j]);
                 }
             }
-            TextBoxTotal.Text = Convert.ToString(total);
+            TextBoxTotal.Text = "$" + Convert.ToString(total);
 
             //Move this to OrderHistory?
             Orders newOrderHistory = new Orders();
