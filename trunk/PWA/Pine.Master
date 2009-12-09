@@ -20,7 +20,8 @@
                     <asp:Repeater ID="menu" runat="server" DataSourceID="siteMapData">
                         <ItemTemplate>
                             <li>
-                                <a href="<%# Eval("url")%>"><%# Eval("title") %></a>
+                                <%--<a href="<%# Eval("url")%>"><%# Eval("title") %></a>--%>
+                                <%# getContent(Eval("url").ToString(), Eval("title").ToString()) %>
                             </li>
                         </ItemTemplate>
                     </asp:Repeater>

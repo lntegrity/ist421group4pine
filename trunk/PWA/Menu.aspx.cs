@@ -134,7 +134,7 @@ namespace PWA
                 btnContinue.Visible = true;
                 MenuPanel.Visible = true;
             }
-                        
+            Response.Redirect("Menu.aspx");  
         }
 
         protected void btnNewUser_Click(object sender, EventArgs e)
