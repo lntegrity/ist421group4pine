@@ -32,6 +32,15 @@ namespace PWA {
         protected global::System.Web.UI.WebControls.TextBox txtPhoneLogon;
         
         /// <summary>
+        /// btnSignIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSignIn;
+        
+        /// <summary>
         /// rfvPhoneLogon control.
         /// </summary>
         /// <remarks>
@@ -48,15 +57,6 @@ namespace PWA {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regexPhoneLogon;
-        
-        /// <summary>
-        /// btnSignIn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignIn;
         
         /// <summary>
         /// btnNewUser control.
@@ -84,15 +84,6 @@ namespace PWA {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblHeader;
-        
-        /// <summary>
-        /// lblRollInstruction control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRollInstruction;
         
         /// <summary>
         /// GridView1 control.
@@ -183,6 +174,15 @@ namespace PWA {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxTotal;
+        
+        /// <summary>
+        /// lblRollInstruction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRollInstruction;
         
         /// <summary>
         /// btnContinue control.

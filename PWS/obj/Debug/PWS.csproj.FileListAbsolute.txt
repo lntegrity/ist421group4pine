@@ -53,3 +53,8 @@ C:\Documents and Settings\BaTz\Desktop\New Folder\PWS\bin\PWS.pdb
 C:\Documents and Settings\BaTz\Desktop\New Folder\PWS\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\BaTz\Desktop\New Folder\PWS\obj\Debug\PWS.dll
 C:\Documents and Settings\BaTz\Desktop\New Folder\PWS\obj\Debug\PWS.pdb
+C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\bin\PWS.dll
+C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\bin\PWS.pdb
+C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\obj\Debug\PWS.dll
+C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\obj\Debug\PWS.pdb

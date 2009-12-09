@@ -19,6 +19,13 @@ namespace PWA
             {
                 btnLogout.Visible = true;
             }
+            if (IsPostBack)
+            {
+                if (Session["LeadID"] == null)
+                    btnLogout.Visible = false;
+                else
+                    btnLogout.Visible = true;
+            }
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

@@ -3,13 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="HomeContent">
-        <h1>Confirm Your Order:</h1>
-        <p>Please review your order information 
-        to the right, then press "Submit" to confirm your order.</p>
-        <p>
-            <asp:Button ID="btnSubmit" runat="server" Text="Submit" 
-                onclick="btnSubmit_Click" />
-        </p>
+        <h1>Review Your Orders:</h1>
+        <p>To the right you will see previously placed orders:</p>
     </div>
     <div class="HomeImage">
         <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">

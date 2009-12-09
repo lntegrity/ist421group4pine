@@ -9,13 +9,13 @@
         {
             width: 624px;
         }
-        .style5
+        .style7
         {
-            width: 576px;
+            width: 280px;
         }
-        .style6
+        .style8
         {
-            width: 86px;
+            width: 75px;
         }
     </style>
 </asp:Content>
@@ -25,23 +25,21 @@
             <font face="Helvetica" size="2">Registered? Enter your phone:</font>                                        
             <asp:TextBox ID="txtPhoneLogon" runat="server" Width="100px" 
                 ValidationGroup="Logon"></asp:TextBox>
+            <asp:Button ID="btnSignIn" runat="server" Text="Sign In" 
+                onclick="btnSignIn_Click" ValidationGroup="Logon" /> 
             <asp:RequiredFieldValidator ID="rfvPhoneLogon" runat="server" 
                 ErrorMessage="RequiredFieldValidator" Text="*" 
                 ControlToValidate="txtPhoneLogon" ValidationGroup="Logon"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="regexPhoneLogon" runat="server" 
                 ErrorMessage="RegularExpressionValidator" Text="Format: xxx-xxx-xxxx" 
                 ControlToValidate="txtPhoneLogon" ValidationExpression="\d{3}-\d{3}-\d{4}" 
-                ValidationGroup="Logon"></asp:RegularExpressionValidator>
-            <asp:Button ID="btnSignIn" runat="server" Text="Sign In" 
-                onclick="btnSignIn_Click" ValidationGroup="Logon" />                                        
+                ValidationGroup="Logon"></asp:RegularExpressionValidator>                                                   
             <font face="Helvetica" size="2">New user? </font>                                        
             <asp:Button ID="btnNewUser" runat="server" Text="Click Here" 
                 onclick="btnNewUser_Click" ValidationGroup="None" />                
         </asp:Panel>
     <asp:Panel runat="server" ID="MenuPanel">
-    <h1><asp:Label runat="server" ID="lblHeader">Our Signature Sushi Rolls:</asp:Label></h1>
-    <p><asp:Label runat="server" ID="lblRollInstruction">Please enter how many of each roll you would like in the Quantity column, then press Continue:</asp:Label>
-    </p>        
+    <h1><asp:Label runat="server" ID="lblHeader">Our Signature Sushi Rolls:</asp:Label></h1>    
     <table class="style1" cellpadding="2" cellspacing="0">
         <tr>
         <td rowspan="8" class="style2" valign="top" colspan="2">
@@ -53,9 +51,9 @@
                 <RowStyle BackColor="White" ForeColor="#000066" />
                 <Columns>
                     
-                    <asp:BoundField DataField="ItemID" HeaderText="ItemID" InsertVisible="False" 
+                    <asp:BoundField DataField="ItemID" HeaderText="Item ID" InsertVisible="False" 
                         ReadOnly="True" SortExpression="ItemID" />
-                    <asp:BoundField DataField="ItemName" HeaderText="ItemName" 
+                    <asp:BoundField DataField="ItemName" HeaderText="Item Name" 
                         SortExpression="ItemName" />
                     <asp:BoundField DataField="Description" HeaderText="Description" 
                         SortExpression="Description" />
@@ -114,10 +112,11 @@
             </td>
         </tr>
         <tr>
-            <td>
-            
+            <td class="style7">
+            <p style="width: 539px"><asp:Label runat="server" ID="lblRollInstruction">Please enter how many you would like in the Quantity column, then press Continue:</asp:Label>
+            </p>
             </td>
-            <td>
+            <td class="style8">
                 <asp:Button ID="btnContinue" runat="server" Text="Continue" onclick="btnContinue_Click" Visible="False" />
             </td>
         </tr>            

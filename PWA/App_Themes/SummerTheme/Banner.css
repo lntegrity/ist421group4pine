@@ -35,6 +35,28 @@
 	margin:0px 0px 0px 0px;
 	padding:0px 0px 0px 0px;
 }
+.LogoutButton
+{
+    width:80px;
+    position:absolute;
+    left:700px;
+    top:5px;
+    font-family:"Tempus Sans ITC", "Times New Roman", Serif;
+    text-decoration:none;
+    background:White;
+    margin:0px;
+    padding:0px;
+    z-index:100;
+}
+.LogoutButton a
+{
+    color:green;
+}
+.LogoutButton a:active, a:visited, a:hover
+{
+    color:#CC6633;
+    text-decoration:underline;
+}
 .Content
 {
 	margin-left:30px;
@@ -43,25 +65,6 @@
 	background-color:White;
 	float:left;
 	position:relative;
-}
-.LogoutButton
-{
-    position:relative;
-    left:275px;
-    top:5px;
-    font-family:"Tempus Sans ITC", "Times New Roman", Serif;
-    text-decoration:underline;
-    background:White;
-    margin:0px;
-    padding:0px;
-}
-.LogoutButton a
-{
-    color:green;
-}
-.LogoutButton a:hover, a:active, a.here:link, a.here:visited
-{
-    color:#CC6633;
 }
 .Content h1
 {
@@ -148,4 +151,9 @@
 .PrimaryNavigation a.here:link, a.here:visited
 {
 	
+}
+.LeadsLinks a:hover, a:active
+{
+    color:Blue;
+    margin:0px;
 }
