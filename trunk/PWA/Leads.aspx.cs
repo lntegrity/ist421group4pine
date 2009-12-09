@@ -12,10 +12,10 @@ namespace PWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Service1 WS = new Service1();
-            Lead[] ld = WS.GetLeads();
-            LeadsList.DataSource = ld;
-            LeadsList.DataBind();            
+            //Service1 WS = new Service1();
+            //Lead[] ld = WS.GetLeads();
+            //LeadsList.DataSource = ld;
+            //LeadsList.DataBind();            
         }
         
     }

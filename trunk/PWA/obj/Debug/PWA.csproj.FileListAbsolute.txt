@@ -53,3 +53,8 @@ C:\Documents and Settings\BaTz\Desktop\New Folder\PWA\bin\PWA.pdb
 C:\Documents and Settings\BaTz\Desktop\New Folder\PWA\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\BaTz\Desktop\New Folder\PWA\obj\Debug\PWA.dll
 C:\Documents and Settings\BaTz\Desktop\New Folder\PWA\obj\Debug\PWA.pdb
+C:\Documents and Settings\BaTz\Desktop\Takara's\PWA\bin\PWA.dll
+C:\Documents and Settings\BaTz\Desktop\Takara's\PWA\bin\PWA.pdb
+C:\Documents and Settings\BaTz\Desktop\Takara's\PWA\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\BaTz\Desktop\Takara's\PWA\obj\Debug\PWA.dll
+C:\Documents and Settings\BaTz\Desktop\Takara's\PWA\obj\Debug\PWA.pdb

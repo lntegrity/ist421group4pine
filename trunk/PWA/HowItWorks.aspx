@@ -12,11 +12,6 @@
         please call us at (215) 441-0217, or send an email to Comments@Takaras.com</p>
     </div>
     <div class="HomeImage">
-        Confirmation goes here - Order ID, date/time submitted, delivery/pickup?
-    </div>
-    <div>
-    <asp:TextBox ID="SetLeadID" runat="server" Width="20px"></asp:TextBox>
-    <asp:Button ID="btnSetLeadID" runat="server" Text="Set Lead ID" 
-            onclick="btnSetLeadID_Click" />
+        <img src="App_Themes/SummerTheme/Images/SushiRestaurant.jpg" alt=""/>
     </div>
 </asp:Content>

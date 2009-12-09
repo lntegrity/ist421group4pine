@@ -37,6 +37,15 @@ namespace PWA
                 btnContinue.Visible = true;
                 MenuPanel.Visible = true;
             }
+
+            //Dynamically Update Total
+            //foreach (TextBox text in textBoxes)
+            //    if (text.TextChanged)
+            //        TextBoxTotal.Text = Convert.ToString(total);
+            //if (TextBoxTotal.Text == "")
+            //    btnContinue.Enabled = false;
+            //else
+            //    btnContinue.Enabled = true;
         }
 
         protected void btnContinue_Click(object sender, EventArgs e)
@@ -57,18 +66,15 @@ namespace PWA
             textBoxes.Add(txtDragon.Text);
             textBoxes.Add(txtChicken.Text);
             textBoxes.Add(txtCalifornia.Text);
+
             double[] quantities = new double[item.Length];
             double total = 0;
             for (int j = 0; j < item.Length; j++)
             {
                 quantities[j] = Convert.ToDouble(textBoxes[j]) * Convert.ToDouble(listItems[j]);
                 total += quantities[j]; 
-            }
-            
-            TextBoxTotal.Text = Convert.ToString(total);
-
-            //Response.Redirect("Order.aspx");
-
+            }         
+                     
             OrderItems[] o = new OrderItems[7];
             
             int numOrders = WS.GetOrderCount(Convert.ToInt16(Session["LeadID"]));            
@@ -86,6 +92,7 @@ namespace PWA
                     Boolean success = WS.InsertOrder(o[j]);
                 }
             }
+            TextBoxTotal.Text = Convert.ToString(total);
 
             //Move this to OrderHistory?
             Orders newOrderHistory = new Orders();
@@ -94,6 +101,8 @@ namespace PWA
             newOrderHistory.Total = Convert.ToDecimal(total);
 
             Boolean success1 = WS.CopyToOrder(newOrderHistory);
+
+            Response.Redirect("Confirmation.aspx");
         }
         
         protected void btnSignIn_Click(object sender, EventArgs e)
@@ -122,7 +131,7 @@ namespace PWA
                 btnContinue.Visible = true;
                 MenuPanel.Visible = true;
             }
-            
+                        
         }
 
         protected void btnNewUser_Click(object sender, EventArgs e)
