@@ -13,6 +13,8 @@
                     <asp:TextBox ID="txtLeadName" runat="server"></asp:TextBox>
                 </td>
                 <td>
+                    <asp:RequiredFieldValidator ID="rfvName" runat="server" 
+                        ControlToValidate="txtLeadName" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                     </td>
             </tr>
             <tr>
@@ -22,6 +24,8 @@
                     <asp:TextBox ID="txtLeadAddress" runat="server"></asp:TextBox>
                 </td>
                 <td>
+                    <asp:RequiredFieldValidator ID="rfvAddress" runat="server" 
+                        ControlToValidate="txtLeadAddress" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                     </td>
             </tr>
             <tr>
@@ -31,6 +35,8 @@
                     <asp:TextBox ID="txtLeadCity" runat="server"></asp:TextBox>
                 </td>
                 <td>
+                    <asp:RequiredFieldValidator ID="rfvCity" runat="server" 
+                        ControlToValidate="txtLeadCity" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                     </td>
             </tr>
             <tr>
@@ -38,6 +44,8 @@
                     <font face="Helvetica">State:</font></td>
                 <td>
                     <asp:DropDownList id="txtLeadState" runat="server">
+                    
+                    <asp:ListItem>Choose Your State</asp:ListItem>
 
                     <asp:ListItem Value="AL">Alabama</asp:ListItem>
 
@@ -145,6 +153,9 @@
 
                 </td>
                 <td>
+                    <asp:RequiredFieldValidator ID="rfvDDLState" runat="server" 
+                        ControlToValidate="txtLeadState" ErrorMessage="RequiredFieldValidator" 
+                        InitialValue="Choose Your State">*</asp:RequiredFieldValidator>
                     </td>
             </tr>
             
@@ -155,6 +166,8 @@
                     <asp:TextBox ID="txtLeadZip" runat="server"></asp:TextBox>
                 </td>
                 <td>
+                    <asp:RequiredFieldValidator ID="rfvZip" runat="server" 
+                        ControlToValidate="txtLeadZip" ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
                     </td>
             </tr>
             
