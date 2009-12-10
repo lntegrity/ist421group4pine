@@ -38,17 +38,14 @@ namespace PWA
                 MenuPanel.Visible = true;
             }
                   
-            //Dynamically Update Total
+            //Dynamically Update Total and Enable/Disable Continue button
             //foreach (TextBox text in textBoxes)
             //    if (text.TextChanged)
             //        TextBoxTotal.Text = Convert.ToString(total);
-            //if (TextBoxTotal.Text == "")
+            //if (TextBoxTotal.Text == "" | TextBoxTotal.Text == "$0")
             //    btnContinue.Enabled = false;
             //else
             //    btnContinue.Enabled = true;
-
-            if (TextBoxTotal.Text == null | TextBoxTotal.Text == "$0")
-                btnContinue.Enabled = false;
         }
 
         protected void btnContinue_Click(object sender, EventArgs e)

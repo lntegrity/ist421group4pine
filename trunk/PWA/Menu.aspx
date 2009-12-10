@@ -7,15 +7,7 @@
         }
         .style2
         {
-            width: 624px;
-        }
-        .style7
-        {
-            width: 49px;
-        }
-        .style8
-        {
-            width: 26px;
+            width: 11px;
         }
         </style>
 </asp:Content>
@@ -42,10 +34,11 @@
     <h1><asp:Label runat="server" ID="lblHeader">Our Signature Sushi Rolls:</asp:Label></h1>    
     <table class="style1" cellpadding="2" cellspacing="0">
         <tr>
-        <td rowspan="8" class="style2" valign="top" colspan="2">
+        <td rowspan="8" valign="top" colspan="2">
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;E:\PSU 2008\IST 421\Projects\Takara's\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;Connect Timeout=30;User Instance=True" 
+                ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
                 ProviderName="System.Data.SqlClient" 
+                
                 SelectCommand="SELECT [fldItemID], [fldItemName], [fldItemPrice], [fldDescription] FROM [tblMenu]">
             </asp:SqlDataSource>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
@@ -118,7 +111,7 @@
             <td height="10px">
                 <asp:TextBox ID="txtDragon" runat="server" Width="35px">0</asp:TextBox>
                 <asp:Button ID="btnTotal" runat="server" Text="Total" 
-                    onclick="btnTotal_Click" />
+                    onclick="btnTotal_Click" Height="26px" Width="48px" />
             </td>
         </tr>
         <tr>
@@ -128,13 +121,13 @@
             </td>
         </tr>
         <tr>
-            <td class="style7">
-            <p style="width: 520px"><asp:Label runat="server" ID="lblRollInstruction">Please enter how many you would like in the Quantity boxes, then press Continue:</asp:Label>
+            <td class="style2">
+            <p style="width: 595px"><asp:Label runat="server" ID="lblRollInstruction">Please enter how many you would like in the Quantity boxes, then press Continue: <asp:Button ID="btnContinue" runat="server" Text="Continue" 
+                    onclick="btnContinue_Click" Visible="False" Height="25px" Width="70px" />
+            </asp:Label>
             </p>
             </td>
-            <td class="style8">
-                <asp:Button ID="btnContinue" runat="server" Text="Continue" onclick="btnContinue_Click" Visible="False" />
-            </td>
+            
         </tr>            
     </table>
     </asp:Panel>
