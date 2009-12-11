@@ -102,7 +102,7 @@ namespace PWA
 
             Boolean success1 = WS.CopyToOrder(newOrderHistory);
 
-            Response.Redirect("Confirmation.aspx");
+            Response.Redirect("Order.aspx");
         }
         
         protected void btnSignIn_Click(object sender, EventArgs e)

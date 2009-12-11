@@ -5,8 +5,9 @@
     <div class="Content">
         <h1>Our Customers:</h1>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-            ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
+            ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;C:\Documents and Settings\Norman Hunt\Desktop\ISTPineProject\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
             ProviderName="System.Data.SqlClient" 
+            
             
             SelectCommand="SELECT [fldLeadID], [fldLeadName], [fldLeadAddress], [fldLeadState], [fldLeadCity], [fldLeadZip], [fldLeadPhone] FROM [tblLeads]">
         </asp:SqlDataSource>

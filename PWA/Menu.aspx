@@ -36,8 +36,9 @@
         <tr>
         <td rowspan="8" valign="top" colspan="2">
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;C:\Documents and Settings\BaTz\Desktop\Takara's\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
+                ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;C:\Documents and Settings\Norman Hunt\Desktop\ISTPineProject\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
                 ProviderName="System.Data.SqlClient" 
+                
                 
                 SelectCommand="SELECT [fldItemID], [fldItemName], [fldItemPrice], [fldDescription] FROM [tblMenu]">
             </asp:SqlDataSource>

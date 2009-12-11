@@ -7,8 +7,12 @@
         <p>To the right you will see previously placed orders:</p>
     </div>
     <div class="HomeImage">
-        <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" 
+            AllowPaging="True" AllowSorting="True" BorderStyle="Ridge">
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+            ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;C:\Documents and Settings\Norman Hunt\Desktop\ISTPineProject\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
+            ProviderName="System.Data.SqlClient" 
+            SelectCommand="SELECT [OrderID], [Total], [Date] FROM [tblOrder]"></asp:SqlDataSource>
     </div>
 </asp:Content>

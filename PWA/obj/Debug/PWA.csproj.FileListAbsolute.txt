@@ -73,3 +73,8 @@ E:\PSU 2008\IST 421\Projects\Takara's\PWA\bin\PWA.pdb
 E:\PSU 2008\IST 421\Projects\Takara's\PWA\obj\Debug\ResolveAssemblyReference.cache
 E:\PSU 2008\IST 421\Projects\Takara's\PWA\obj\Debug\PWA.dll
 E:\PSU 2008\IST 421\Projects\Takara's\PWA\obj\Debug\PWA.pdb
+C:\Documents and Settings\Norman Hunt\Desktop\ISTPineProject\PWA\bin\PWA.dll
+C:\Documents and Settings\Norman Hunt\Desktop\ISTPineProject\PWA\bin\PWA.pdb
+C:\Documents and Settings\Norman Hunt\Desktop\ISTPineProject\PWA\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Norman Hunt\Desktop\ISTPineProject\PWA\obj\Debug\PWA.dll
+C:\Documents and Settings\Norman Hunt\Desktop\ISTPineProject\PWA\obj\Debug\PWA.pdb
