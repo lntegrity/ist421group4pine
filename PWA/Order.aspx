@@ -57,6 +57,7 @@
     <div class="HomeImage">
         <p>Menu with name, quantity, and total
          <asp:DataGrid ID="Menu" runat="server" ></asp:DataGrid>
+            <asp:ListBox ID="ListBoxOrderItems" runat="server" Width="199px"></asp:ListBox>
         </p>
     </div>
 </asp:Content>
