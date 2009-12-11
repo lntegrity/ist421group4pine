@@ -56,7 +56,12 @@
     </div>
     <div class="HomeImage">
         <p>Menu with name, quantity, and total
-         <asp:DataGrid ID="Menu" runat="server" ></asp:DataGrid>
+         <asp:DataGrid ID="Menu" runat="server" DataSourceID="SqlDataSource1" ></asp:DataGrid>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;C:\Documents and Settings\Norman Hunt\Desktop\ISTPineProject\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
+                ProviderName="System.Data.SqlClient" 
+                SelectCommand="SELECT [OrderID], [MenuID], [Quantity], [TotalUnitPrice], [LeadID], [OrderSubmitTime] FROM [tblLeadOrder]">
+            </asp:SqlDataSource>
             <asp:ListBox ID="ListBoxOrderItems" runat="server" Width="199px"></asp:ListBox>
         </p>
     </div>

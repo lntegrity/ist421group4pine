@@ -13,7 +13,7 @@ namespace PWA
         {
             lblDate.Text = DateTime.Now.ToShortDateString();
 
-//            Response.Redirect("Default.aspx");
+            Response.Redirect("OrderHistory.aspx");
         }
     }
 }
