@@ -661,6 +661,8 @@ namespace PWA.PineWS {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class MenuItems {
         
+        private string orderInfoField;
+        
         private int itemIdField;
         
         private string itemNameField;
@@ -668,6 +670,16 @@ namespace PWA.PineWS {
         private string descriptionField;
         
         private decimal priceField;
+        
+        /// <remarks/>
+        public string OrderInfo {
+            get {
+                return this.orderInfoField;
+            }
+            set {
+                this.orderInfoField = value;
+            }
+        }
         
         /// <remarks/>
         public int ItemId {
