@@ -67,12 +67,12 @@ namespace PWA
             textBoxes.Add(txtChicken.Text);
             textBoxes.Add(txtCalifornia.Text);
 
-            double[] quantities = new double[item.Length];
+            
             double total = 0;
             for (int j = 0; j < item.Length; j++)
             {
-                quantities[j] = Convert.ToDouble(textBoxes[j]) * Convert.ToDouble(listItems[j]);
-                total += quantities[j]; 
+                total += Convert.ToDouble(textBoxes[j]) * Convert.ToDouble(listItems[j]);
+                
             }         
                      
             OrderItems[] o = new OrderItems[7];
@@ -159,12 +159,12 @@ namespace PWA
             textBoxes.Add(txtChicken.Text);
             textBoxes.Add(txtCalifornia.Text);
 
-            double[] quantities = new double[item.Length];
+            
             double total = 0;
             for (int j = 0; j < item.Length; j++)
             {
-                quantities[j] = Convert.ToDouble(textBoxes[j]) * Convert.ToDouble(listItems[j]);
-                total += quantities[j];
+                total += Convert.ToDouble(textBoxes[j]) * Convert.ToDouble(listItems[j]);
+                
             }         
             TextBoxTotal.Text = "$" + Convert.ToString(total);
         }
