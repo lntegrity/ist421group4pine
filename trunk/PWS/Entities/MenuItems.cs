@@ -18,6 +18,13 @@ namespace PWS.Entities
         private string itemName; 
         private string description;
         private decimal price;
+        private string orderInfo;
+
+        public string OrderInfo
+        {
+            get { return orderInfo; }
+            set { orderInfo = value; }
+        }
 
         public int ItemId
         {
