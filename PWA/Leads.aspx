@@ -11,7 +11,7 @@
             
             SelectCommand="SELECT [fldLeadID], [fldLeadName], [fldLeadAddress], [fldLeadState], [fldLeadCity], [fldLeadZip], [fldLeadPhone] FROM [tblLeads]">
         </asp:SqlDataSource>
-        <asp:GridView ID="gvLeads" runat="server" AllowPaging="True" 
+        <asp:GridView ID="gvLeads" runat="server" AllowPaging="True" Font-Names="Helvetica"
             AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" 
             BorderStyle="Solid" BorderWidth="1px" CellPadding="4" DataKeyNames="fldLeadID" 
             DataSourceID="SqlDataSource1" AllowSorting="True" PageSize="7" 

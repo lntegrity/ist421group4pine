@@ -9,6 +9,10 @@
         {
             width: 11px;
         }
+        .style3
+        {
+            width: 314px;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -34,7 +38,7 @@
     <h1><asp:Label runat="server" ID="lblHeader">Our Signature Sushi Rolls:</asp:Label></h1>    
     <table class="style1" cellpadding="2" cellspacing="0">
         <tr>
-        <td rowspan="8" valign="top" colspan="2">
+        <td rowspan="8" valign="top" colspan="2" class="style3">
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                 ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;C:\Documents and Settings\Norman Hunt\Desktop\ISTPineProject\PWS\App_Data\Pine.mdf&quot;;Integrated Security=True;User Instance=True" 
                 ProviderName="System.Data.SqlClient" 
@@ -42,7 +46,7 @@
                 
                 SelectCommand="SELECT [fldItemID], [fldItemName], [fldItemPrice], [fldDescription] FROM [tblMenu]">
             </asp:SqlDataSource>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Font-Names="Helvetica"
                 BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" 
                 CellPadding="4" 
                 EmptyDataText="There are no data records to display." ForeColor="#000066" 
@@ -123,7 +127,7 @@
         </tr>
         <tr>
             <td class="style2">
-            <p style="width: 595px"><asp:Label runat="server" ID="lblRollInstruction">Please enter how many you would like in the Quantity boxes, then press Continue: <asp:Button ID="btnContinue" runat="server" Text="Continue" 
+            <p style="width: 520px"><asp:Label runat="server" ID="lblRollInstruction">Please enter how many you would like in the Quantity boxes, then press Continue: <asp:Button ID="btnContinue" runat="server" Text="Continue" 
                     onclick="btnContinue_Click" Visible="False" Height="25px" Width="70px" />
             </asp:Label>
             </p>

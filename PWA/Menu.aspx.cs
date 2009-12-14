@@ -13,7 +13,7 @@ namespace PWA
     public partial class Menu : System.Web.UI.Page
     {
         
-        double total = 0;
+        
         
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -96,12 +96,12 @@ namespace PWA
                         
             //Move this to OrderHistory?
             Orders newOrderHistory = new Orders();
-
+            Session["Phone"] = txtPhoneLogon.Text;
             newOrderHistory.OrderID = numOrders + 1;
             newOrderHistory.Total = Convert.ToDecimal(total);
 
             Boolean success1 = WS.CopyToOrder(newOrderHistory);
-
+            Session["OrderID"] = newOrderHistory.OrderID;
             Response.Redirect("Order.aspx");
         }
         
@@ -110,7 +110,7 @@ namespace PWA
             //Check phone number against the DB
             Service1 WS = new Service1();
             int validatePhone = WS.ValidateLogin(txtPhoneLogon.Text);
-
+            Session["Lead"] = WS.LoginLead(txtPhoneLogon.Text);
             //If number is valid, enable the Continue button, hide Account Panel
             if (validatePhone == 1)
             {
