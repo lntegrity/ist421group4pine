@@ -97,7 +97,17 @@
 	padding-top:50px;
 	margin-top:20px;
 }
-
+.HomeContent2
+{
+	width:420px;
+	float:left;
+	position:relative;
+	background-color:White;
+	padding-right:40px;
+	margin-top:20px;
+	margin-left:20px;
+	/*border:solid 1px black;*/
+}	
 .PrimaryNavigation
 {
 	font-family:"Tempus Sans ITC", Arial, Sans-Serif;
